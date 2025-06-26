@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Project Modal</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="project-card" onclick="openModal()">
+            <h3>My Awesome Project</h3>
+            <p>Click to see more details</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-bg" id="modal">
+
+    </div>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #ecf0f3;
+        }
+
+        .projects {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .project-card {
+            display: inline-block;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Modal Background */
+        .modal-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 999;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            color: #ffffff;
+            position: relative;
+            animation: fadeIn 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+
+        /* Close Button */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Carousel */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .carousel img {
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        /* Description */
+        .description {
+            margin-bottom: 20px;
+        }
+
+        /* Tags */
+        .tags {
+            margin-bottom: 20px;
+        }
+
+        .tags span {
+            background: #20c997;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        /* Buttons */
+        .modal-buttons a {
+            background: #033b4a;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 10px;
+            transition: background 0.3s;
+        }
+
+        .modal-buttons a:hover {
+            background: #20c997;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QTech - Scroll Animation Demo</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #333;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Scroll Animation Styles */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered Delays */
+    .fade-in:nth-child(1) { transition-delay: 0.2s; }
+    .fade-in:nth-child(2) { transition-delay: 0.4s; }
+    .fade-in:nth-child(3) { transition-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section style="height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <h1>Welcome to <span style="color: #0066ff;">QTech</span></h1>
+  </section>
+
+  <!-- Animated Product Sections -->
+  <section>
+    <h2>Featured Products</h2>
+    <div class="product-card fade-in">
+      <h3>RTX 4090 GPU</h3>
+      <p>Ultimate performance for gamers and creators.</p>
+    </div>
+    <div class="product-card fade-in">
+      <h3>Ryzen 9 7950X</h3>
+      <p>16-core powerhouse for multitasking.</p>
+    </div>
+    <div class="product-card fade-in">
+      <h3>Alienware X16</h3>
+      <p>Premium gaming laptop with QHD display.</p>
+    </div>
+  </section>
+
+  <!-- Another Section -->
+  <section style="background: #0066ff; color: white;">
+    <div class="fade-in">
+      <h2>Ready to Upgrade?</h2>
+      <p>Explore our full catalog of PC components.</p>
+      <button style="margin-top: 20px; padding: 10px 20px; background: white; color: #0066ff; border: none; border-radius: 5px;">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, { threshold: 0.1 }); // Trigger when 10% of element is visible
+
+      // Observe all .fade-in elements
+      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

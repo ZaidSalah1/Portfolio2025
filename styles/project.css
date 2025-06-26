@@ -1,0 +1,837 @@
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+:root {
+  --text-color: #033b4a;
+  --main-color: #2ad883;
+}
+
+.mainProjImg {
+  position: absolute;
+  right: 350px;
+  top: 195px;
+}
+
+.projIcon {
+  width: 500px;
+}
+
+.eclips {
+  width: 60%;
+  position: absolute;
+  top: -480px;
+  right: -266px;
+}
+
+.introInfo {
+  width: 25%;
+  margin: 400px 270px;
+}
+
+.projName {
+  font-size: 96px;
+  color: var(--text-color);
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.projName span {
+  font-size: 96px;
+  color: var(--main-color);
+}
+
+.introInfo p {
+  font-size: 20px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.introBtns {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ← THIS centers content horizontally */
+  gap: 10px;
+  text-align: center;
+}
+
+.detailsBtn {
+  width: 35%;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(42, 216, 131, 0.3);
+}
+
+.detailsBtn:hover {
+  background-color: var(--main-color);
+  box-shadow: 0 6px 16px rgba(42, 216, 131, 0.4);
+}
+
+.githubBtn {
+  width: 35%;
+  background-color: transparent;
+  color: var(--text-color);
+  border: 2.5px solid var(--text-color);
+}
+
+.githubBtn:hover {
+  background-color: var(--text-color);
+  color: white;
+}
+
+.features {
+  margin: auto;
+  text-align: center;
+  margin-top: 750px;
+  width: 55%;
+}
+
+.featuresItem {
+  display: flex;
+  margin: 100px auto;
+  width: 75%;
+  box-sizing: border-box;
+}
+
+.swiper-slide.item {
+  text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+  z-index: 10;
+}
+
+/* Gradient Arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  background: linear-gradient(50deg, #2c3e50, #2ad883);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Hover Effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: linear-gradient(50deg, #2c3e50, #2ad883) !important;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  background: none;
+  -webkit-text-fill-color: white;
+  text-fill-color: white;
+}
+
+
+
+
+.features h1 {
+  font-size: 35px;
+  color: #150a33;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.features .item h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #150a33;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.features .item .icon {
+  width: 50px;
+}
+
+.features p {
+  /* font-size: 20px; */
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  width: 30%;
+  margin: 15px auto;
+  font-weight: 330;
+  letter-spacing: 0.01em;
+  color: #656565;
+  margin-bottom: 50px;
+}
+
+.featuresItem {
+  display: flex;
+  width: 55%;
+  margin: 100px auto;
+}
+
+.featuresItem .item p {
+  width: 65%;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -200px;
+}
+
+.left .phone {
+  position: absolute;
+}
+
+.left .dots-bg {
+  margin-bottom: 35px;
+}
+
+.right {
+  display: flex;
+  position: relative;
+}
+
+.right .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline h1 {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+
+  margin: 1.5rem 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.timeline h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3e50, #2ad883);
+  border-radius: 2px;
+}
+
+/* Optional: Add a subtle animation */
+.timeline h1:hover::after {
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.btns {
+  position: absolute;
+  display: flex;
+  gap: 25px;
+  bottom: -155px;
+  left: 5px;
+  width: 50%;
+}
+
+/* Common store button styling */
+.store-btn {
+  width: 220px;
+  height: 70px;
+  border-radius: 50px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+  position: relative;
+
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #033b4a, #2ad883);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.store-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* Center horizontally */
+  text-align: left;
+  gap: 12px;
+}
+
+/* Hover effect for both store buttons */
+.store-btn:hover {
+  background-image: linear-gradient(to right, #033b4a, #2ad883), linear-gradient(to right, #033b4a, #2ad883);
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(3, 59, 74, 0.6), 0 0 12px rgba(42, 216, 131, 0.5), 0 0 20px rgba(42, 216, 131, 0.4),
+    0 0 28px rgba(3, 59, 74, 0.3);
+}
+
+.store-btn.active {
+  background-image: linear-gradient(to right, #033b4a, #2ad883), linear-gradient(to right, #033b4a, #2ad883);
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(3, 59, 74, 0.6), 0 0 12px rgba(42, 216, 131, 0.5), 0 0 20px rgba(42, 216, 131, 0.4),
+    0 0 28px rgba(3, 59, 74, 0.3);
+}
+
+.store-btn i {
+  font-size: 28px;
+  transition: filter 0.3s ease;
+}
+
+/* Invert icon color on hover */
+.store-btn:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.store-btn.active img {
+  filter: brightness(0) invert(1);
+}
+
+/* Text color and spacing */
+.store-btn .text h1,
+.store-btn .text h2 {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.store-btn:hover .text h1,
+.store-btn:hover .text h2 {
+  color: #fff;
+}
+
+.store-btn.active .text h1,
+.store-btn.active .text h2 {
+  color: #fff;
+}
+
+.store-btn .icon img {
+  width: 30px;
+}
+.btns button {
+  width: 25%;
+}
+
+.line {
+  position: absolute;
+  left: 42px;
+  bottom: -65px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  z-index: 10;
+}
+
+.text-content {
+  width: 50%;
+}
+
+.text-content h3 {
+  font-size: 20px;
+  color: #150a33;
+  font-weight: 500;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.text-content p {
+  /* font-size: 20px; */
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  margin: 15px auto;
+  font-weight: 330;
+  letter-spacing: 0.01em;
+  color: #656565;
+}
+
+.step .icon {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  transition: background-image 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Initial gradient border with white background */
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff), /* inner fill */ linear-gradient(to right, #033b4a, #2ad883); /* border */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  cursor: pointer;
+}
+
+/* Apply hover styles to the first .step by default */
+.timeline .step.active .icon {
+  background-image: linear-gradient(to right, #033b4a, #2ad883), linear-gradient(to right, #033b4a, #2ad883);
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(3, 59, 74, 0.6), 0 0 12px rgba(42, 216, 131, 0.5), 0 0 20px rgba(42, 216, 131, 0.4),
+    0 0 28px rgba(3, 59, 74, 0.3);
+}
+
+.timeline .step .icon:hover {
+  /* Hover effect for all .step elements */
+  background-image: linear-gradient(to right, #033b4a, #2ad883), linear-gradient(to right, #033b4a, #2ad883);
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(3, 59, 74, 0.6), 0 0 12px rgba(42, 216, 131, 0.5), 0 0 20px rgba(42, 216, 131, 0.4),
+    0 0 28px rgba(3, 59, 74, 0.3);
+}
+
+.step .icon img {
+  width: 45px;
+  transition: filter 0.3s ease;
+}
+
+/* Apply filter to the first .step image by default */
+.timeline .step.active .icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Apply hover effect for all images */
+.timeline .step .icon:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.step {
+  display: flex;
+  gap: 25px;
+}
+
+#tools {
+  padding: 60px 0;
+}
+
+#tools .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 63%;
+  margin: auto;
+  gap: 80px;
+  /* You can increase or decrease this gap */
+  padding: 0 20px;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+
+#tools .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 450px;
+}
+
+#tools .left h1 {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 36px;
+  color: #2c3e50;
+  margin: 10px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+#tools .left h2 {
+  font-size: 24px;
+  color: #444;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#tools .left p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+#tools .left strong {
+  color: #444;
+  font-weight: 600;
+}
+
+#tools .right {
+  flex: none;
+  width: 450px;
+  min-height: 400px;
+  top: 90px;
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.nodejs {
+  background: #f3fcf7eb;
+  /* soft mint */
+
+  top: 160px;
+  left: 220px;
+  width: 160px;
+  height: 160px;
+}
+
+.mysql {
+  background: #e5f0fa;
+  /* soft sky blue */
+
+  top: 143px;
+  left: -50px;
+  width: 80px;
+  height: 80px;
+}
+
+.firebase {
+  background: #fff5e0;
+  /* soft cream orange */
+  top: 20px;
+  left: 240px;
+}
+
+.studio {
+  background: #edf2fb;
+  /* soft bluish-white */
+  top: 160px;
+  left: 75px;
+  width: 110px;
+  height: 110px;
+}
+
+.java {
+  background: #f2f3ff;
+  /* off-white with lavender tint */
+  top: -20px;
+  left: 60px;
+  width: 140px;
+  height: 140px;
+}
+
+/* Optional: Responsive tweaks */
+@media (max-width: 768px) {
+  #tools .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #tools .right {
+    margin-top: 40px;
+  }
+
+  .box {
+    position: static;
+    margin: 10px;
+  }
+
+  #tools .right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+  }
+}
+
+/* footer */
+
+footer {
+  margin: 0;
+  padding: 0;
+  position: relative; /* Add this so absolute children can align to it */
+  width: 100%;
+}
+
+.footer-bg {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  display: block;
+  /* Lower z-index so nav appears above it */
+}
+
+.footer-heading {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 300px;
+}
+
+.footer-heading h1 {
+  color: #ffffff;
+  margin: 0; /* Removes any default margin around the heading */
+  padding: 0; /* Removes any padding */
+}
+
+.footer-row {
+  position: absolute;
+  bottom: 50px; /* Adjust as needed to move vertically */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Above the footer background */
+  display: flex;
+  gap: 350px;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+}
+
+.inputs {
+  width: 35%;
+}
+
+.contact-info {
+  background-color: #fff;
+  width: 450px;
+  height: 450px;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  color: #fff;
+}
+
+.inputs h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input:focus {
+  outline: none;
+}
+
+label {
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.input:focus ~ label,
+.input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #fff;
+  transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #fff;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.inputs button {
+  background: #fff;
+  color: #28c76f;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact-info.modern-card {
+  width: 450px;
+  height: 350px;
+  background: rgba(20, 30, 40, 0.85); /* Darker background */
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  color: #e0e0e0; /* Soft light text color */
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-content {
+  text-align: center;
+}
+
+.info-content h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #ffffff; /* Bright text for heading */
+}
+
+.info-content .desc {
+  font-size: 14px;
+  color: #cccccc; /* Softer gray for description */
+  margin-bottom: 25px;
+}
+
+.details p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #d1d1d1; /* Light gray for details */
+}
+
+.details i {
+  margin-right: 8px;
+  color: #20c997;
+}
+
+.socials {
+  margin-top: 30px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials a {
+  color: #e0e0e0;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.socials a:hover {
+  transform: translateY(-3px) scale(1.1); /* Subtle hover effect */
+  background-color: #28a745; /* Green background on hover */
+  color: #fff;
+}

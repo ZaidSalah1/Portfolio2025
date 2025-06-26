@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Animation</title>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.8.1/build/player/lottie.min.js"></script>
+    <style>
+      /* Optional: style for the loader container */
+      #lottie-animation {
+        width: 100px; /* Set width as needed */
+        height: 100px; /* Set height as needed */
+        margin: auto;
+        position: fixed; /* To make it stay fixed during loading */
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the animation */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Lottie Animation Container -->
+    <div id="lottie-animation"></div>
+
+    <script>
+      // Initialize Lottie animation
+      var animation = lottie.loadAnimation({
+        container: document.getElementById("lottie-animation"), // The container for the animation
+        renderer: "svg", // Renderer type
+        loop: true, // Set to true for infinite loop
+        autoplay: true, // Set to true for automatic play
+        path: "img/assets/loadingg.json", // Path to your Lottie JSON animation
+      });
+
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("lottie-animation").style.display = "none"; // Hide after 500ms
+        }, 1500); // Adjust this delay as needed
+      });
+    </script>
+  </body>
+</html>

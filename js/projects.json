@@ -1,0 +1,324 @@
+[
+    {
+        "id": "qtech",
+        "title": "QTech",
+        "description": "QTech is a fully functional e-commerce platform crafted for high-performance PC hardware sales — from GPUs and CPUs to laptops and accessories. It combines clean aesthetics, seamless user experience, secure authentication, and an advanced admin dashboard.",
+        "github": "https://github.com/ZaidSalah1",
+        "mainImage": "img/projectsImgs/qTech imgs/image 1.png",
+        "images": [
+            "/img/projectsImgs/qTech imgs/qTech-main.png",
+            "/img/projectsImgs/qTech imgs/qTech-productPage.png",
+            "/img/projectsImgs/qTech imgs/qTech-allProductPage.png",
+            "/img/projectsImgs/qTech imgs/qTech-checkoutPage.png"
+        ],
+        "overviewImage": "img/projectsImgs/qTech imgs/mockUp2.png",
+        "overview": [
+            "⚡ Responsive UI with intuitive navigation",
+            "🔒 Secure login and order handling",
+            "📦 Full product and inventory management",
+            "📊 Admin dashboard with analytic"
+        ],
+        "headingTitle": "Powerful Store Features",
+        "headingText": "Everything you need for a modern, scalable, and seamless online store — from browsing to checkout.",
+        "features": [
+            {
+                "icon": "<i class='fas fa-box-open icon'></i>",
+                "title": "Product Management",
+                "description": "Manage listings, categories, prices, and stock levels with ease using the admin dashboard."
+            },
+            {
+                "icon": "<i class='fas fa-shopping-cart icon'></i>",
+                "title": "Smart Cart System",
+                "description": "Users can add, update, and remove items easily — synced in real time for smooth checkout."
+            },
+            {
+                "icon": "<i class='fas fa-lock icon'></i>",
+                "title": "Secure Checkout",
+                "description": "Protected payment flow with authentication to keep customer data and orders safe."
+            },
+            {
+                "icon": "<i class='fas fa-chart-line icon'></i>",
+                "title": "Admin Dashboard",
+                "description": "Analytics, order tracking, and sales insights to help store owners stay in control."
+            },
+            {
+                "icon": "<i class='fas fa-laptop icon'></i>",
+                "title": "Responsive Design",
+                "description": "Optimized for desktop, tablet, and mobile — ensuring great user experience on all screens."
+            },
+            {
+                "icon": "<i class='fas fa-search icon'></i>",
+                "title": "Advanced Search",
+                "description": "Users can filter, sort, and find products instantly with a powerful and fast search system."
+            }
+        ],
+        "build": "QTech is engineered using a robust and modern tech stack tailored for e-commerce excellence. From dynamic product displays to secure transactions and real-time admin insights, every layer of the platform is optimized for performance, usability, and scalability.",
+        "techBuild": "htmll, css, javaScript, Node.js, MySql, Firebase, Figma, charts.js",
+        "color": "",
+        "color2": ""
+    },
+    {
+        "id": "qtech-dashboard",
+        "title": "QTech - Dashboard",
+        "description": "QTech Dashboard is a powerful control panel designed for managing your e-commerce platform with ease. It allows admins to monitor store performance, view and manage customer orders, and fully control product listings — including adding, editing, and deleting items.",
+        "github": "https://github.com/ZaidSalah1",
+        "mainImage": "img/projectsImgs/qTech imgs/qtech-dashboard.png",
+        "images": [
+            "/img/projectsImgs/qTech imgs/d1.png",
+            "/img/projectsImgs/qTech imgs/d2.png",
+            "/img/projectsImgs/qTech imgs/d3.png",
+            "/img/projectsImgs/qTech imgs/dd3.png",
+            "/img/projectsImgs/qTech imgs/d4.png",
+            "/img/projectsImgs/qTech imgs/d5.png"
+        ],
+        "overviewImage": "img/projectsImgs/qTech imgs/dashboard-main2.png",
+        "overview": [
+            "🛒 Full product control: add, edit, or remove items easily",
+            "📦 Real-time order tracking and management",
+            "📊 Dashboard analytics to monitor store performance",
+            "⚙️ Admin panel with user-friendly interface"
+        ],
+        "headingTitle": "Complete Admin Control",
+        "headingText": "Manage your store operations, monitor orders, and update products — all from a powerful and intuitive dashboard.",
+        "features": [
+            {
+                "icon": "<i class='fas fa-database icon'></i>",
+                "title": "Inventory Control",
+                "description": "Add, edit, and delete products with full control over categories, stock levels, and prices."
+            },
+            {
+                "icon": "<i class='fas fa-list-alt icon'></i>",
+                "title": "Order Management",
+                "description": "Track, review, and update order statuses with real-time visibility of customer purchases."
+            },
+            {
+                "icon": "<i class='fas fa-chart-bar icon'></i>",
+                "title": "Sales Analytics",
+                "description": "Visual reports and statistics on total orders, revenue, top products, and user activity."
+            },
+            {
+                "icon": "<i class='fas fa-users-cog icon'></i>",
+                "title": "User Access",
+                "description": "Manage admin roles and access permissions securely and easily."
+            },
+            {
+                "icon": "<i class='fas fa-tools icon'></i>",
+                "title": "Advanced Controls",
+                "description": "Fine-tune platform behavior, UI settings, and feature toggles directly from the dashboard."
+            },
+            {
+                "icon": "<i class='fas fa-laptop icon'></i>",
+                "title": "Responsive UI",
+                "description": "Designed to work across all devices — desktops, tablets, and mobile screens."
+            }
+        ],
+        "build": "The QTech Dashboard is built for efficiency and control. With dynamic data handling, powerful admin tools, and clear insights into store operations, it provides all the backend tools needed to keep your e-commerce platform running smoothly and efficiently.",
+        "techBuild": "HTML, CSS, JavaScript, Node.js, MySQL, Firebase, Charts.js",
+        "color": "",
+        "color2": ""
+    },
+    {
+        "id": "athkar",
+        "title": "Athkar",
+        "description": "A comprehensive Islamic app featuring Quran reading/listening, prayer times, daily Athkar (morning, evening, post-salah), a digital Tasbih, interactive quizzes, and reminder notifications — all in a clean, modern design for a smooth spiritual experience.",
+        "github": "https://github.com/ZaidSalah1/Islamic-App",
+        "mainImage": "img/projectsImgs/athkar/athkar4screens.png",
+        "images": [
+            "/img/projectsImgs/athkar/1.png",
+            "/img/projectsImgs/athkar/2.png",
+            "/img/projectsImgs/athkar/3.png",
+            "/img/projectsImgs/athkar/4.png",
+            "/img/projectsImgs/athkar/5.png",
+            "/img/projectsImgs/athkar/6.png"
+        ],
+        "overviewImage": "img/projectsImgs/athkar/athkar main.png",
+        "overview": [
+            "📖 Seamless Quran reading and audio playback",
+            "🕋 Accurate prayer times with alerts",
+            "🕌 Daily Athkar reminders (morning, evening, post-prayer)",
+            "📱 Clean and responsive UI for all devices"
+        ],
+        "headingTitle": "",
+        "headingText": "",
+        "features": [
+            {
+                "icon": "<i class='fas fa-mosque icon'></i>",
+                "title": "Daily Athkar",
+                "description": "Morning, evening, and post-salah supplications presented in a simple and readable format."
+            },
+            {
+                "icon": "<i class='fas fa-quran icon'></i>",
+                "title": "Quran Reading & Listening",
+                "description": "Access the full Quran with high-quality recitations and bookmarking functionality."
+            },
+            {
+                "icon": "<i class='fas fa-bell icon'></i>",
+                "title": "Prayer Time Reminders",
+                "description": "Get notified at accurate prayer times based on your location."
+            },
+            {
+                "icon": "<i class='fas fa-pray icon'></i>",
+                "title": "Tasbih Counter",
+                "description": "Use the digital Tasbih to keep track of your dhikr anytime, anywhere."
+            },
+            {
+                "icon": "<i class='fas fa-question-circle icon'></i>",
+                "title": "Islamic Quizzes",
+                "description": "Test your knowledge on Islamic topics with interactive and educational quizzes."
+            }
+        ],
+        "build": "Athkar App is built with performance and spirituality in mind. From Quran interaction to Athkar automation and accurate prayer calculations, it ensures a fluid and meaningful user journey.",
+        "techBuild": "Java, MySQL, Firebase, REST APIs",
+        "color": "#2f9d36",
+        "color2": ""
+    },
+    {
+        "id": "carRent",
+        "title": "RentRide",
+        "description": "RentRide is a sleek and user-friendly mobile app designed for seamless car rentals. Whether you're booking for a weekend getaway or daily commute, it offers quick access to a wide selection of vehicles with real-time availability, secure booking, and a smooth user experience.",
+        "github": "https://github.com/ZaidSalah1/RentRide",
+        "mainImage": "img/projectsImgs/rent ride/main.png",
+        "images": [
+            "/img/projectsImgs/rent ride/1.png",
+            "/img/projectsImgs/rent ride/2.png",
+            "/img/projectsImgs/rent ride/3.png",
+            "/img/projectsImgs/rent ride/4.png"
+        ],
+        "overviewImage": "img/projectsImgs/rent ride/car rental1.png",
+        "overview": [
+            "🚗 Browse and book from a range of cars",
+            "📱 Clean, responsive mobile-first design",
+            "🔐 Secure user authentication and booking",
+            "📍 GPS-based car location and pickup points"
+        ],
+        "headingTitle": "Powerful Car Rental Features",
+        "headingText": "Everything you need for a smooth, flexible, and user-friendly rental experience — from car selection to return.",
+        "features": [
+            {
+                "icon": "<i class='fas fa-car-side icon'></i>",
+                "title": "Wide Car Selection",
+                "description": "Explore a variety of cars by type, brand, or budget — from compact models to luxury rides."
+            },
+            {
+                "icon": "<i class='fas fa-calendar-check icon'></i>",
+                "title": "Easy Booking",
+                "description": "Select your date, time, and location in just a few taps with real-time availability updates."
+            },
+            {
+                "icon": "<i class='fas fa-map-marker-alt icon'></i>",
+                "title": "Pickup & Return Points",
+                "description": "Find nearby pickup locations or schedule convenient drop-off points using GPS integration."
+            },
+            {
+                "icon": "<i class='fas fa-lock icon'></i>",
+                "title": "Secure Payments",
+                "description": "Safe and encrypted payment options with instant booking confirmation."
+            },
+            {
+                "icon": "<i class='fas fa-user-check icon'></i>",
+                "title": "User Profile",
+                "description": "Manage bookings, personal details, and rental history all in one place."
+            },
+            {
+                "icon": "<i class='fas fa-mobile-alt icon'></i>",
+                "title": "Mobile-Optimized UI",
+                "description": "Designed with mobile-first principles to ensure a smooth and intuitive user experience."
+            }
+        ],
+        "build": "RentRide is built for speed, simplicity, and reliability. From real-time car availability to secure booking and intuitive navigation, it delivers a smooth rental experience tailored for Android users.",
+        "techBuild": "Java, Android Studio, MySql, PHP, Firebase, Google Maps API, REST APIs",
+        "color": "#77C9F5",
+        "color2": "#5892B1"
+    },
+    {
+        "id": "food",
+        "title": "YummiGo",
+        "description": "YummiGo is a fast, fun, and user-friendly mobile app built for effortless food ordering and local restaurant discovery. Whether you're craving street food or fine dining, it gets your meal to you hot and fresh — fast.",
+        "github": "https://github.com/ZaidSalah1/Restaurant-App",
+        "mainImage": "img/projectsImgs/food/main.png",
+        "images": [
+            "/img/projectsImgs/food/1.png",
+            "/img/projectsImgs/food/2.png",
+            "/img/projectsImgs/food/3.png",
+            "/img/projectsImgs/food/4.png",
+            "/img/projectsImgs/food/5.png",
+            "/img/projectsImgs/food/6.png"
+        ],
+        "overviewImage": "img/projectsImgs/food/main2.png",
+        "overview": [
+            "🍔 Browse and order from top-rated restaurants",
+            "📱 Clean, responsive mobile-first design",
+            "🛵 Real-time order tracking",
+            "🔒 Secure user authentication and payments"
+        ],
+        "headingTitle": "Your Favorite Meals, Delivered Fast",
+        "headingText": "From late-night cravings to family dinners — YummiGo delivers tasty food with speed, simplicity, and a touch of flavor.",
+        "features": [
+            {
+                "icon": "<i class='fas fa-utensils icon'></i>",
+                "title": "Diverse Menu Options",
+                "description": "Explore meals from different cuisines, restaurants, and chefs — tailored to your taste."
+            },
+            {
+                "icon": "<i class='fas fa-clock icon'></i>",
+                "title": "Quick & Easy Ordering",
+                "description": "Place your order in just a few taps with real-time preparation and delivery updates."
+            },
+            {
+                "icon": "<i class='fas fa-map-marker-alt icon'></i>",
+                "title": "Location-Based Suggestions",
+                "description": "Discover popular food places near you using integrated location services."
+            },
+            {
+                "icon": "<i class='fas fa-lock icon'></i>",
+                "title": "Secure Payments",
+                "description": "Safe and encrypted payment methods for worry-free transactions."
+            },
+            {
+                "icon": "<i class='fas fa-user-circle icon'></i>",
+                "title": "User Profiles",
+                "description": "Save your favorites, view order history, and manage preferences easily."
+            },
+            {
+                "icon": "<i class='fas fa-mobile-alt icon'></i>",
+                "title": "Mobile-Optimized UI",
+                "description": "Designed for a seamless experience across smartphones and tablets."
+            }
+        ],
+        "build": "YummiGo is crafted with performance, speed, and convenience in mind. With real-time order tracking, intuitive UI, and a strong backend, it ensures a smooth and satisfying food journey from restaurant to doorstep.",
+        "techBuild": "Java, Android Studio, MySQL, PHP, Firebase, REST APIs, Google Maps API",
+        "color": "#ff5353",
+        "color2": "#ff8c42"
+    },
+    {
+        "id": "chronique",
+        "images": [
+            "/img/projectsImgs/watchApp/1.png",
+            "/img/projectsImgs/watchApp/2.png"
+        ]
+    },
+    {
+        "id": "crimzonWallet",
+        "images": [
+            "/img/projectsImgs/crimzonWallet/1.png",
+            "/img/projectsImgs/crimzonWallet/2.png",
+            "/img/projectsImgs/crimzonWallet/3.png"
+        ]
+    },
+    {
+        "id": "carLux",
+        "images": [
+            "/img/projectsImgs/carLux/1.png",
+            "/img/projectsImgs/carLux/2.png"
+        ]
+    },
+    {
+        "id": "wheels",
+        "images": [
+            "/img/projectsImgs/wheels/1.png",
+            "/img/projectsImgs/wheels/11.png",
+            "/img/projectsImgs/wheels/2.png",
+            "/img/projectsImgs/wheels/3.png"
+        ]
+    }
+]

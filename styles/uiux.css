@@ -1,0 +1,501 @@
+/* UI/UX */
+
+#uiUxProjects {
+  position: relative;
+  background-color: #ecf0f3;
+  height: 4900px;
+}
+
+#uiUxProjects .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#uiUxProjects h2,
+#uiUxProjects hr {
+  margin: 0; /* Removes all default margin */
+}
+
+#uiUxProjects hr {
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 5px auto 0;
+}
+
+#uiUxProjects h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 38px;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#uiUxProjects {
+  text-align: center;
+}
+
+.nikeCard {
+  position: relative;
+  display: inline-block;
+  width: 1180px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+/* Video */
+.nikeVideo {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* Overlay that blurs background */
+.nikeOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+/* Text */
+.nikeOverlay h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+/* Hover effects */
+.nikeCard:hover .nikeOverlay {
+  opacity: 1;
+}
+
+.nikeCard:hover .nikeOverlay h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.UIUX-mobile {
+  margin-top: 150px;
+  overflow: hidden;
+}
+
+.UIUX-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.UIUX-item img {
+  transition: transform 0.3s ease; /* Smooth scaling */
+  cursor: pointer;
+}
+
+.UIUX-item .projectInfo {
+  cursor: pointer;
+}
+
+.UIUX-item img:hover {
+  transform: scale(1.1);
+}
+
+.UIUX-item.row {
+  flex-direction: row;
+}
+
+.UIUX-item img {
+  z-index: 1000;
+}
+
+.UIUX-item .projectInfo {
+  z-index: 1000;
+  width: 40%;
+}
+
+.UIUX-item .projectInfo {
+  z-index: 1000;
+  width: 40%;
+}
+
+.UIUX-item h1 {
+  color: #033b4a;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.UIUX-item p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #4a4a4d;
+}
+
+.hexagonalShape.topLeft {
+  position: absolute;
+  top: -500px;
+  left: -16%;
+  height: auto;
+  width: 50%;
+  rotate: calc(43deg);
+}
+
+.carRentMockup {
+  margin-top: 100px;
+  z-index: 11111;
+  margin: auto;
+}
+
+.svgWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg0003invert2 {
+  position: absolute;
+  top: 99%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Remove animation from the container */
+.UIUX-item {
+  opacity: 1;
+  transform: none;
+}
+
+/* Animate image */
+.UIUX-item img {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animate text */
+.UIUX-item .projectInfo {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s; /* delay for stagger */
+}
+
+/* When visible, animate them in */
+.UIUX-item.visible img,
+.UIUX-item.visible .projectInfo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#uiUxProjects {
+    position: relative;
+    background-color: #ecf0f3;
+    height: fit-content !important;
+}
+
+
+.UIUX-mobile {
+  position: relative;
+  overflow: visible;
+}
+
+.UIUX-item {
+  position: relative;
+  margin: 0 auto;
+}
+
+.nikeCard,
+.nikeVideo {
+  /* margin: 100px auto; */
+  overflow: visible;
+}
+
+.videoWrapper {
+  position: relative;
+  overflow: hidden; /* Clip video inside rounded corners */
+  border-radius: 10px; /* Your desired round corners */
+}
+
+.carRentMockup {
+  margin: 120px auto;
+}
+
+.carRentHeading h1 {
+  color: #033b4a;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.carRentHeading p {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #4a4a4d;
+  width: 50%;
+  margin: auto;
+}
+
+.hex.left1 {
+  position: absolute;
+  left: 0px;
+  width: 40%;
+}
+
+.hex.right1 {
+  position: absolute;
+  right: 0px;
+  width: 38%;
+}
+
+.nikeCard .dots.n1 {
+  position: absolute;
+  top: 5%;
+  right: -1%;
+  width: 15%;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nikeCard .dots.n2 {
+  position: absolute;
+  top: 99%;
+  left: -1%;
+  width: 15%;
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hex.right2 {
+  position: absolute;
+  right: 0px;
+  width: 40%;
+}
+
+.UIUX-mobile {
+  position: relative;
+  overflow: visible;
+}
+
+.UIUX-item {
+  position: relative;
+  margin: 0 auto;
+}
+
+.nikeCard,
+.nikeVideo {
+  /* margin: 100px auto; */
+}
+
+.hex.left1 {
+  position: absolute;
+  left: 0px;
+  width: 40%;
+}
+
+.hex.right1 {
+  position: absolute;
+  right: 0px;
+  width: 38%;
+}
+
+.hex.right2 {
+  position: absolute;
+  right: 0px;
+  width: 40%;
+}
+
+.imageWrapper {
+  display: inline-block; /* shrink to fit content */
+  max-width: 100%; /* prevent overflow */
+}
+
+@media (max-width: 1540px) {
+  #uiUxProjects .heading {
+    margin-bottom: 100px;
+  }
+
+  .hex.right1 {
+    position: absolute;
+    right: 0px;
+    width: 44%;
+  }
+
+  .hex.left1 {
+    position: absolute;
+    left: 0px;
+    width: 42%;
+  }
+
+  .nikeCard,
+  .nikeVideo {
+    /* width: 90%; */
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nikeCard,
+  .nikeVideo {
+  }
+
+  .dots-white2 {
+    right: 83px;
+    top: 1800px;
+  }
+}
+
+@media (max-width: 520px) {
+}
+
+@media (max-width: 600px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 85%;
+  }
+}
+
+@media (max-width: 570px) {
+  .nikeCard,
+  .nikeVideo {
+    /* width: 490px; */
+  }
+}
+
+@media (max-width: 510px) {
+  .nikeCard,
+  .nikeVideo {
+    /* width: 420px; */
+  }
+}
+
+@media (max-width: 425px) {
+  .nikeCard,
+  .nikeVideo {
+  }
+
+  .hex.right1 {
+    width: 75%;
+    top: 170px;
+  }
+
+  .hex.left1 {
+    width: 75%;
+    top: 210px;
+  }
+
+  .hex.right2 {
+    width: 75%;
+    top: 200px;
+  }
+
+  .dots-white-reverse {
+    top: 2310px;
+  }
+}
+
+@media (max-width: 1540px) {
+  #uiUxProjects .heading {
+    margin-bottom: 100px;
+  }
+
+  .hex.right1 {
+    position: absolute;
+    right: 0px;
+    width: 44%;
+  }
+
+  .hex.left1 {
+    position: absolute;
+    left: 0px;
+    width: 42%;
+  }
+
+  .nikeCard,
+  .nikeVideo {
+    /* width: 90%; */
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nikeCard,
+  .nikeVideo {
+  }
+
+  .dots-white2 {
+    right: 83px;
+    top: 1800px;
+  }
+}
+
+@media (max-width: 520px) {
+}
+
+@media (max-width: 570px) {
+  .nikeCard,
+  .nikeVideo {
+    /* width: 490px; */
+  }
+}
+
+@media (max-width: 510px) {
+  .nikeCard,
+  .nikeVideo {
+    /* width: 420px; */
+  }
+}
+
+@media (max-width: 425px) {
+  .nikeCard,
+  .nikeVideo {
+  }
+
+  .hex.right1 {
+    width: 75%;
+    top: 170px;
+  }
+
+  .hex.left1 {
+    width: 75%;
+    top: 210px;
+  }
+
+  .hex.right2 {
+    width: 75%;
+    top: 209px;
+  }
+
+  .dots-white-reverse {
+    top: 2310px;
+  }
+}

@@ -1,0 +1,187 @@
+.sideHeader {
+  position: fixed;
+  top: 40%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 50000;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: var(--primary-color);
+  backdrop-filter: blur(12px);
+  padding: 15px 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 60px;
+  height: fit-content;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* When visible after scroll */
+.sideHeader.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Expand smoothly on hover */
+.sideHeader:hover {
+  width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav item container */
+.sideHeader .navItem {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  height: 50px;
+  width: 100%;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Icons */
+.sideHeader i {
+  font-size: 26px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  min-width: 30px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Labels */
+.sideHeader span {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Reveal labels smoothly */
+.sideHeader:hover span {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+/* Icon hover animation */
+.sideHeader i:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Nav item hover effect */
+.sideHeader .navItem:hover {
+  transform: translateX(10px);
+}
+
+.sideHeader .projectLink.active,
+.sideHeader .navItem.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+.sideHeader .navItem {
+  text-decoration: none;
+}
+
+.sideHeader a {
+  text-align: center;
+  align-items: center;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown .dropdownToggle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdownMenu {
+  display: none;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown:hover .sideHeader .navItem {
+  margin: 0;
+}
+
+.sideHeader .navItem.dropdown:hover {
+  transform: translateX(10px);
+  margin-bottom: 150px;
+  height: 150px;
+}
+
+.navItem.dropdown:hover .sideheader {
+  height: 1000px;
+}
+
+.dropdownMenu {
+  background: rgba(255, 255, 255, 0.08);
+  /* لون خفيف وشفاف */
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  margin-top: 8px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 160px;
+  /* يناسب توسع sidebar */
+  backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: relative;
+  /* عشان يبقى مع العناصر */
+  z-index: 10;
+}
+
+/* تظهر القائمة عند hover على والدها */
+.navItem.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* روابط القائمة */
+.dropdownMenu a {
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* تأثير عند hover على الروابط */
+.dropdownMenu a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateX(6px);
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -1,0 +1,207 @@
+.imageModal {
+  display: none;
+  position: fixed;
+  z-index: 999000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.336);
+  justify-content: center;
+  align-items: center;
+}
+
+.imageModal-content {
+  max-height: 90vh;
+  overflow: hidden;
+  border-radius: 8px;
+  padding: 10px;
+  width: 85%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto !important;
+  height: 90vh;
+}
+
+.swiper-slide img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Make sure imageModal-content is relative */
+.imageModal-content {
+  position: relative;
+  /* existing styles */
+}
+
+
+
+/* Modern round close button for imageModal - black theme */
+.close-imageModal {
+  position: absolute;
+  top: 60px;
+  right: 295px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #e0e0e0; /* light gray text */
+  background: rgba(25, 25, 25, 0.9); /* dark translucent bg */
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+  user-select: none;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  z-index: 1001; /* keep above other content */
+}
+
+.close-imageModal:hover {
+  color: #fcb700; /* gold on hover */
+  background: #222; /* slightly lighter black */
+  box-shadow: 0 0 12px 3px rgba(252, 183, 0, 0.8); /* gold glow */
+  transform: scale(1.15);
+}
+
+.close-imageModal:active {
+  transform: scale(1);
+  box-shadow: inset 0 0 8px rgba(252, 183, 0, 0.5);
+}
+
+.swiper-button-next-image,
+.swiper-button-prev-image {
+  position: absolute;
+  top: 50%;
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.swiper-button-next-image {
+  right: 10px;
+}
+
+.swiper-button-prev-image {
+  left: 10px;
+}
+
+/* Arrows */
+.swiper-button-next-image::after,
+.swiper-button-prev-image::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: #333;
+}
+
+.swiper-button-next-image::after {
+  content: "\f105"; /* Font Awesome right arrow */
+}
+
+.swiper-button-prev-image::after {
+  content: "\f104"; /* Font Awesome left arrow */
+}
+
+/* Modern hover effect */
+.swiper-button-next-image:hover,
+.swiper-button-prev-image:hover {
+  background: linear-gradient(135deg, #f0c85a, #fcb700);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 15px rgba(252, 183, 0, 0.5);
+}
+
+.swiper-button-next-image:hover::after,
+.swiper-button-prev-image:hover::after {
+  color: white;
+}
+
+/* Pagination container centered below swiper */
+/* Pagination container centered below swiper */
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  z-index: 30;
+  margin: auto;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25); /* translucent dark background */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Base style for dots */
+.swiper-pagination-bullet {
+  width: 25px;
+  height: 25px;
+  background: #ddd;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border: 3px solid transparent;
+  transform: scale(1);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+/* Active dot styling with gold gradient */
+.swiper-pagination-bullet-active {
+  background: linear-gradient(135deg, #f0c85a, #fcb700);
+  box-shadow: 0 0 18px rgba(252, 183, 0, 0.85);
+  border-color: #fcb700;
+  transform: scale(1.4);
+  filter: drop-shadow(0 0 6px rgba(252, 183, 0, 0.8));
+}
+
+/* Hover effect for dots */
+.swiper-pagination-bullet:hover {
+  background: linear-gradient(135deg, #f0c85a, #fcb700);
+  box-shadow: 0 0 14px rgba(252, 183, 0, 0.6);
+  border-color: #fcb700;
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px rgba(252, 183, 0, 0.6));
+}
+
+.swiper-pagination-bullet::after {
+  display: none !important;
+  content: none !important;
+}
+.swiper-pagination-bullet {
+  background: #ddd !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+@media(max-width: 500px) {
+  .imageModal-content {
+    width: 100%;
+  }
+}

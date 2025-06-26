@@ -1,0 +1,917 @@
+:root {
+  --primary-color: #033b4a;
+  --secondary-color: #2dd985;
+  --bg-color: #eefaf8;
+  --gray: #4a4a4d;
+  --shape-color: #f3f5f6;
+  --text-light: white;
+  --bg-light: white;
+  --hover-bg: var(--secondary-color);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+
+@media (max-width: 2440px) {
+  .eclips_shape {
+    left: 270px;
+  }
+}
+
+@media (max-width: 2070px) {
+  .eclips_shape {
+    left: 200px;
+  }
+}
+
+@media (max-width: 1770px) {
+  .eclips_shape {
+    left: 100px;
+  }
+  .about-text .aboutPra {
+    width: 700px;
+  }
+}
+
+@media (max-width: 1770px) {
+  .eclips_shape {
+    left: 20px;
+  }
+  .about-text .aboutPra {
+    width: 700px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .about-text .aboutPra {
+    max-width: 580px;
+  }
+}
+@media (max-width: 1450px) {
+  #gameCanvas {
+    width: 350px;
+  }
+
+  .snakeContainer {
+    width: 420px;
+    height: 570px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .eclips_shape {
+    left: unset;
+    right: 205px;
+    top: 210px;
+  }
+}
+@media (max-width: 1250px) {
+  .about-text .aboutPra {
+    max-width: 530px;
+    width: 530px;
+  }
+}
+
+@media (max-width: 1175px) {
+  .about-text .aboutPra {
+    max-width: 440px;
+    width: 440px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .eclips_shape {
+    left: unset;
+    right: 128px;
+    top: 478px;
+  }
+
+  .service-title {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .services {
+    width: 85%;
+  }
+
+  .servCard {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1150px) {
+  #about .container {
+    gap: 5px;
+  }
+  .sideHeader i {
+    font-size: 20px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    min-width: 28px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sideHeader {
+    width: 35px;
+  }
+}
+
+@media (max-width: 1050px) {
+  #about .container {
+    gap: 10px;
+  }
+  .sideHeader i {
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    min-width: 28px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sideHeader {
+    width: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-card {
+    padding: 30px 5px;
+  }
+
+  .service-description {
+    margin: 0;
+  }
+
+  .service-title {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 965px) {
+  /* #gameCanvas {
+    width: 300px;
+  }
+  .snakeContainer {
+    flex: 1 1 325px;
+    max-width: 500px;
+  } */
+
+  .about-text .aboutPra {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 850px) {
+  #gameCanvas {
+    width: 350px;
+  }
+  .snakeContainer {
+    flex: 1 1 355px;
+    max-width: 500px;
+  }
+}
+@media (max-width: 800px) {
+  #gameCanvas {
+    width: 300px;
+  }
+}
+
+/* flex: 0 1 310px; */
+
+.nav-btn {
+  pointer-events: auto; /* Ensure it's clickable */
+}
+
+@media (max-width: 1300px) {
+  .nav-btn {
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center the button horizontally */
+    z-index: 10; /* Ensure it's on top */
+  }
+}
+
+@media (max-width: 768px) {
+  #skills {
+    height: 2000px;
+  }
+
+  .snakeContainer {
+    display: none;
+  }
+
+  .about-text .aboutPra,
+  .about-text p {
+    width: 100%;
+  }
+
+  .skills-content {
+    top: 10%;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .contactItem {
+    margin: 15px auto;
+    width: fit-content;
+  }
+
+  .emailUnderline {
+    width: 100%;
+  }
+
+  .socialLinks {
+    width: fit-content;
+    margin: 15px auto;
+  }
+
+  .about-text .aboutPra {
+    text-align: center;
+    margin: auto;
+    max-width: 525px;
+  }
+
+  #skills {
+    height: 1800px;
+  }
+
+  .bg0003 {
+    bottom: -3px;
+  }
+
+  .sideHeader i {
+    min-width: 22px !important;
+  }
+
+  .servCard {
+    gap: 35px;
+  }
+}
+
+@media (max-width: 425px) {
+  .skills-content {
+    top: 8% !important;
+    z-index: 11;
+  }
+
+  #skills {
+    height: 1500px;
+  }
+
+  .topbar {
+    padding: 10px 15px;
+  }
+
+  .mobile {
+    right: 10px;
+  }
+
+  .logo {
+    align-items: center;
+  }
+
+  .hello .hello-name {
+    margin: -18px 0 0;
+  }
+  .hello {
+    top: 80px;
+  }
+
+  .logo span {
+    font-size: 25px;
+  }
+
+  .logo .logoIcon {
+    font-size: 20px;
+  }
+
+  .about-text {
+    z-index: 1;
+  }
+
+  .about-text p {
+    font-size: 28px;
+  }
+
+  .about-text .aboutPra {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .servCard {
+    gap: 45px;
+    z-index: 1111;
+  }
+
+  .service-card {
+    padding: 3px;
+  }
+
+  .service-title {
+    font-size: 18px;
+  }
+
+  .service-description {
+    font-size: 15px;
+  }
+
+  .service-icon img {
+    width: 55px;
+    height: 55px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+
+  .services {
+    padding: 0px;
+  }
+
+  #about {
+    height: 1100px;
+  }
+
+  .services {
+    position: absolute;
+    bottom: -230px;
+  }
+
+  .dots-green {
+    top: -93px;
+  }
+
+  .skillsBG2 {
+    top: 558px !important;
+    left: 18px !important;
+    z-index: 11 !important;
+  }
+
+  #about .triangle {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  #about .container {
+    width: 85%;
+  }
+}
+@media (max-width: 360px) {
+}
+
+/* Skills section */
+
+/* Web Projects */
+
+/* UI/UX Section Start */
+
+.UIUX-item {
+  z-index: 1;
+}
+
+@media (max-width: 2400px) {
+  .hexagonalShape.left1 {
+    top: 1955px;
+    width: 40%;
+  }
+
+  .hexagonalShape.right2 {
+    position: absolute;
+    top: 2574px;
+    right: 0px;
+    z-index: 111;
+    width: 40%;
+  }
+}
+
+@media (max-width: 2100px) {
+  .carRentMockup .carRentImg {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1990px) {
+  .hexagonalShape.right1 {
+    position: absolute;
+    top: 740px;
+    right: 0;
+    width: 40%;
+  }
+
+  .hexagonalShape.right2 {
+    position: absolute;
+    top: 2574px;
+    right: 0px;
+    z-index: 111;
+    width: 37%;
+  }
+}
+
+@media (max-width: 1850px) {
+  .hexagonalShape.right1 {
+    top: 835px;
+    width: 40%;
+  }
+
+  .hexagonalShape.right2 {
+    position: absolute;
+    top: 2675px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 1750px) {
+  .hexagonalShape.left1 {
+    top: 1970px;
+    width: 45%;
+  }
+}
+@media (max-width: 1560px) {
+  .hexagonalShape.right2 {
+    position: absolute;
+    top: 2770px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 1540px) {
+  #uiUxProjects {
+    height: 4200px;
+  }
+
+  .skills-content {
+    top: 13%;
+  }
+
+  .nikeCard,
+  .nikeVideo {
+    width: 950px;
+  }
+
+  .UIUX-item img {
+    width: 52%;
+  }
+
+  .UIUX-item .crimzonImg {
+    width: 50%;
+  }
+
+  .UIUX-item .carLuxImg {
+    width: 50%;
+  }
+
+  .hexagonalShape.right1 {
+    top: 870px;
+    width: 44%;
+  }
+
+  .hexagonalShape.left1 {
+    top: 1765px;
+    width: 44%;
+  }
+
+  .hexagonalShape.right2 {
+    top: 2442px;
+    width: 42%;
+  }
+  .carRentMockup .carRentImg {
+    width: 75%;
+  }
+
+  .UIUX-item p {
+    font-size: 20px;
+  }
+  .UIUX-item h1 {
+    font-size: 28px;
+  }
+
+  .UIUX-item .projectInfo {
+    z-index: 1000;
+    width: 38%;
+  }
+
+    .bg0003invert2 {
+    top: unset;
+    bottom: unset !important;
+    top: 99.8%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hexagonalShape.topLeft {
+    top: -420px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 820px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hexagonalShape.left1 {
+    top: 1415px;
+    width: 44%;
+  }
+  .hexagonalShape.right2 {
+    top: 1850px;
+    width: 39%;
+  }
+
+  .hexagonalShape.right2 {
+    top: 1785px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .hexagonalShape.topLeft {
+    top: -220px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #uiUxProjects {
+    height: 3575px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #uiUxProjects {
+    height: 3275px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .UIUX-item h1 {
+    font-size: 25px;
+  }
+  .UIUX-item p {
+    font-size: 18px;
+  }
+
+
+}
+
+@media (max-width: 975px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 745px;
+  }
+
+  .hexagonalShape.right1 {
+    top: 740px;
+  }
+}
+
+@media (max-width: 880px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 650px;
+  }
+
+  .hexagonalShape.right1 {
+    top: 700px;
+  }
+
+  .hexagonalShape.left1 {
+    top: 1245px;
+  }
+
+  .hexagonalShape.right2 {
+    top: 1645px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 550px;
+  }
+
+  .UIUX-item h1 {
+    font-size: 22px;
+  }
+
+  #uiUxProjects {
+    position: relative;
+    background-color: #ecf0f3;
+    height: 2600px;
+  }
+
+  .hexagonalShape.right1 {
+    top: 650px;
+  }
+  .hexagonalShape.left1 {
+    top: 1140px;
+    width: 44%;
+  }
+  .hexagonalShape.right2 {
+    top: 1490px;
+    width: 39%;
+  }
+
+  .hexagonalShape.bottomLeft {
+    position: absolute;
+    top: 2175px;
+    width: 40%;
+  }
+
+  .carRentMockup .carRentImg {
+    width: 90%;
+  }
+
+  .sideHeader {
+    width: 35px;
+  }
+
+  .sideHeader i {
+    font-size: 20px;
+    min-width: 7px;
+  }
+
+  .dots-white-reverse2 {
+    top: 371px;
+  }
+
+  .dots-white-reverse {
+    top: 1266px;
+  }
+
+  .dots-white2 {
+    position: absolute;
+    right: 25px;
+    top: 1680px;
+  }
+
+  .carRentHeading h1 {
+    color: #033b4a;
+    font-size: 24px;
+  }
+
+  .carRentHeading p {
+    font-size: 19px;
+    width: 65%;
+  }
+}
+
+@media (max-width: 600px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 450px;
+  }
+}
+
+@media (max-width: 550px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 400px;
+  }
+
+  .carRentMockup {
+    margin: 120px auto;
+  }
+
+  #uiUxProjects {
+    position: relative;
+    background-color: #ecf0f3;
+    height: 2450px;
+  }
+
+  .carRentHeading p {
+    font-size: 19px;
+    width: 85%;
+  }
+}
+
+@media (max-width: 450px) {
+  #uiUxProjects {
+    height: 3145px !important;
+  }
+
+  .hexagonalShape.topLeft {
+    top: -148px;
+    width: 75%;
+    rotate: 26deg;
+  }
+
+  .sideHeader {
+    display: none;
+  }
+
+  #uiUxProjects {
+    height: 2900px;
+  }
+
+  .nikeCard,
+  .nikeVideo {
+    width: 400px;
+  }
+
+  .UIUX-item img {
+    width: 100%;
+  }
+
+  .UIUX-item .crimzonImg {
+    width: 100%;
+  }
+
+  .UIUX-item .carLuxImg {
+    width: 100%;
+  }
+  .UIUX-item.row,
+  .UIUX-item {
+    flex-direction: column-reverse;
+  }
+
+  .UIUX-item .projectInfo {
+    z-index: 1000;
+    width: 95%;
+  }
+
+  .UIUX-mobile {
+    margin-top: 80px;
+  }
+
+  .bg0003invert {
+    bottom: -60px;
+  }
+
+  .bg0003invert {
+    position: absolute;
+    bottom: unset !important;
+    top: 99.8%;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Or higher depending on other layers */
+    pointer-events: none; /* Optional if you don’t want it to block clicks */
+  }
+
+  .aboutDotsBG {
+    top: 205px;
+    opacity: 0.5;
+  }
+
+  .aboutHexagonal {
+    opacity: 0.5;
+  }
+
+  .skillsBG2 {
+    top: 200px;
+    left: -45px;
+    z-index: 11;
+  }
+
+  .skillsBG1 {
+    right: 40px;
+    z-index: 0;
+    top: -46px;
+    opacity: 0.9;
+  }
+
+  .hexagonalShape.right1 {
+    top: 700px;
+    width: 75%;
+  }
+  .hexagonalShape.left1 {
+    top: 1399px;
+    width: 75%;
+  }
+
+  .hexagonalShape.right2 {
+    top: 2030px;
+    width: 75%;
+  }
+
+  .dots-white-reverse2 {
+    position: absolute;
+    left: 25px;
+    top: 32%;
+  }
+  .dots-white-reverse {
+    top: 79%;
+  }
+
+  .dots-white2 {
+    position: absolute;
+    right: 25px;
+    top: 55%;
+  }
+
+  .UIUX-item {
+    flex-direction: column-reverse !important;
+  }
+
+  .UIUX-item {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .UIUX-item.visible {
+    opacity: 1;
+  }
+
+  .UIUX-item img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .UIUX-item.visible img {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .UIUX-item .projectInfo {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s; /* 0.3s delay */
+  }
+
+  .UIUX-item.visible .projectInfo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Remove animation from the container */
+  .UIUX-item {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Animate image */
+  .UIUX-item img {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  /* Animate text */
+  .UIUX-item .projectInfo {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s; /* delay for stagger */
+  }
+
+  /* When visible, animate them in */
+  .UIUX-item.visible img,
+  .UIUX-item.visible .projectInfo {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 375px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 365px;
+  }
+
+  .nikeVideo {
+    width: 365px;
+  }
+  .hello p {
+    width: 330px;
+  }
+}
+
+@media (max-width: 365px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 320px;
+  }
+
+  .nikeVideo {
+    width: 320px;
+  }
+  .hello p {
+    width: 330px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 300px;
+  }
+
+  .nikeVideo {
+    width: 300px;
+  }
+}

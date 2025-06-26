@@ -1,0 +1,1146 @@
+:root {
+  --primary-color: #033b4a;
+  --secondary-color: #2dd985;
+  --bg-color: #eefaf8;
+  --gray: #4a4a4d;
+  --shape-color: #f3f5f6;
+  --text-light: white;
+  --bg-light: white;
+  --hover-bg: var(--secondary-color);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Make sure it covers the entire screen */
+}
+
+/* Lottie Animation container */
+#lottie-animation {
+  width: 200px; /* Set width as needed */
+  height: 200px; /* Set height as needed */
+}
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply animation to header */
+header {
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 50%;
+  /* background-color: #ecf0f3; */
+}
+
+nav {
+  animation: fadeIn 1s ease-in-out;
+  /* Slightly delayed animation for navigation */
+}
+
+body {
+  /* background-color: #ECF0F3; */
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif !important;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  /* Apply Poppins globally */
+}
+
+h2,
+h3,
+h4,
+h5,
+span {
+  font-family: "Poppins", sans-serif;
+}
+
+/* h1 {
+  color: var(--primary-color);
+  font-size: 35px;
+  font-weight: bold;
+} */
+
+span {
+  color: var(--secondary-color); /* Secondary color for "I Build it" */
+  font-size: 38px;
+  font-weight: bold; /* Bold font weight */
+}
+
+.main {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  /* Lower z-index so nav appears above it */
+}
+
+.hello {
+  position: absolute;
+  top: 280px;
+  left: 310px;
+}
+
+.hello span {
+  color: #575757;
+  font-size: 32px;
+}
+
+.hello .hello-name {
+  font-size: 96px;
+  font-weight: 900;
+  color: #20272f;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.hello .hello-name span {
+  font-size: 96px;
+  color: var(--secondary-color);
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.hello p {
+  font-size: 24px;
+  width: 560px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.hello button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 15px;
+  width: 30%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* z-index: 1000;  */
+}
+
+nav {
+  position: absolute;
+  top: 15px;
+  /* Adjust this value to control the top spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: rgba(0, 0, 0, 0.2); */
+  /* Semi-transparent background */
+  border-radius: 10px;
+  z-index: 2000;
+  /* Ensure it's above other elements */
+}
+
+nav a {
+  color: #033b4a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 20px;
+  /* Space between logo and links */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+
+.logo .logoIcon {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 26px;
+}
+
+.logo span {
+  color: #20272f;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.social {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  /* background: rgba(0, 0, 0, 0.6); */
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.social a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+  transform: scale(1.2);
+  color: var(--primary-color); /* Matches your secondary theme color */
+}
+
+.talk {
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #fff;
+  border: 1px solid;
+  border-color: #fff;
+  padding: 5px 25px;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* Section About */
+/* #about .container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    width: 75%;
+    align-items: center;
+} */
+
+#about {
+  position: relative;
+  background-color: #ecf0f3;
+  height: 1200px;
+  margin-top: -7px !important;
+  margin-bottom: 100px;
+}
+
+.aboutBG {
+  position: absolute;
+  top: 0;
+}
+
+.aboutDotsBG {
+  position: absolute;
+  right: 25px;
+  top: 0px;
+}
+
+.aboutDotsBG.left {
+  position: absolute;
+  left: 25px;
+  top: 750px;
+}
+
+.triangle {
+  position: absolute;
+  left: 66%;
+  top: 55%;
+  opacity: 10%;
+}
+
+.eclips_shape {
+  position: absolute;
+  left: 450px;
+  top: 30%;
+}
+
+.aboutHexagonal {
+  position: absolute;
+  right: 0;
+  top: 550px;
+  opacity: calc(80%);
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 38px;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+#about .container h2,
+#about hr {
+  margin: 0; /* Removes all default margin */
+}
+
+#about hr {
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 5px auto 100px;
+}
+
+.about-text p {
+  color: var(--primary-color); /* Primary color for "Dream it." */
+  font-size: 36px;
+  font-weight: bold; /* Bold font weight */
+  margin: 0; /* Remove default margin for better spacing */
+  line-height: 1.2; /* Adjust line height for better readability */
+}
+
+.about-text span {
+  color: var(--secondary-color); /* Secondary color for "I Build it" */
+  font-size: 36px;
+  font-weight: bold; /* Bold font weight */
+}
+
+.about-text p {
+  color: var(--primary-color);
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.about-text span {
+  color: var(--secondary-color);
+  font-size: 36px;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-text span:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.about-text .aboutPra {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 800px;
+  width: 1000px;
+  text-align: left;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contactCard {
+  margin-top: 50px;
+}
+
+.about-text .contactText {
+  color: var(--primary-color);
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px; /* space between snake game and text */
+  max-width: 1200px; /* optional to control total container width */
+  margin: auto;
+  padding: 0 20px; /* small padding on sides */
+}
+
+.snakeContainer {
+  flex: 1 1 400px; /* Take equal width, but minimum 400px */
+  max-width: 500px; /* Optional max width */
+}
+
+.about-text {
+  flex: 1 1 500px;
+  max-width: 600px; /* You can control this */
+}
+
+.contactItem {
+  font-size: 18px;
+  color: #000;
+}
+
+.contactItem a {
+  text-decoration: none;
+  color: #515151;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.contactItem i {
+  color: #20c997;
+  font-size: 22px;
+}
+
+.emailWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+  margin-top: 5px;
+}
+
+.emailWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.emailUnderline {
+  height: 1px;
+  background-color: #989898;
+  width: 50%;
+  margin-top: -10px;
+  /* /* border-radius: 170px; */
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  background-color: #21272f;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-decoration: none; /* 👈 This removes the underline */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  color: #00dfa2;
+  box-shadow: 0 0 10px #00dfa2;
+}
+
+/* Optional: custom hover backgrounds */
+.social-icon:hover {
+  background-color: #333;
+}
+
+.services {
+  position: absolute;
+  bottom: -340px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+  width: 75%;
+}
+
+.title {
+  text-align: center;
+  margin: 20px;
+}
+
+.services #servWhat {
+  text-align: center;
+  color: #3d3d3d;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.services #servTitle {
+  text-align: center;
+  font-size: 38px;
+  color: #2dd985;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.servCard {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+}
+
+.service-card {
+  width: 300px;
+  height: 320px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  color: var(--text-dark);
+  box-shadow: 6px 6px 15px var(--shadow-color);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  background: var(--hover-bg);
+  color: var(--text-light);
+}
+
+.service-card.active {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  background: var(--hover-bg);
+  color: var(--text-light);
+}
+
+/* .service-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+} */
+
+.service-card:hover::before {
+  top: -50px;
+  left: -45px;
+  width: 180px;
+  height: 180px;
+}
+
+.service-icon img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: invert(64%) sepia(46%) saturate(642%) hue-rotate(86deg) brightness(95%) contrast(91%);
+}
+
+.service-card:hover .service-icon img {
+  transform: rotate(10deg) scale(1.1);
+  filter: brightness(0) invert(1); /* Change icon color to white */
+}
+
+.service-card.active .service-icon img {
+  transform: rotate(10deg) scale(1.1);
+  filter: brightness(0) invert(1); /* Change icon color to white */
+}
+
+.service-title {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
+  color: #2c3e50;
+}
+
+.service-description {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.5;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Ensure text stays visible in both states */
+.service-card:hover .service-title,
+.service-card:hover .service-description {
+  color: var(--text-light);
+}
+
+.service-card.active .service-title,
+.service-card.active .service-description {
+  color: var(--text-light);
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Small gap from the cards */
+  z-index: 9998;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Small gap from the cards */
+}
+
+.nav-btn {
+  background: none;
+  border: 2px solid #20b082;
+  color: #20b082;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%; /* Circular buttons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease; /* Smooth transitions for better user interaction */
+  width: 50px; /* Make buttons slightly larger */
+  height: 50px; /* Equal height for a circular shape */
+}
+
+.nav-btn {
+  transition: opacity 0.3s ease;
+}
+
+.nav-btn {
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: #999; /* Muted text color */
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: default; /* Not a pointer when inactive */
+  transition: all 0.3s ease;
+  box-shadow: none;
+  opacity: 0.5; /* Slight transparency */
+  pointer-events: none; /* Prevent clicks */
+  cursor: not-allowed;
+}
+
+/* Only .active gets the hover & clickable look */
+.nav-btn.active {
+  background-color: #20b082;
+  color: white;
+  border-color: #18a574;
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(32, 176, 130, 0.3);
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Optional: animate image inside */
+.nav-btn img {
+  transition: transform 0.3s ease;
+}
+
+.nav-btn.active img {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+
+.prevBtn img,
+.nextBtn img {
+  transition: transform 0.3s ease;
+}
+
+/* Adding a flip effect for the arrow */
+.prevBtn:hover img {
+  transform: rotate(180deg); /* Flip the left arrow on hover */
+}
+
+.nextBtn:hover img {
+  transform: rotate(180deg); /* Flip the right arrow on hover */
+}
+
+.prevBtn,
+.nextBtn {
+  width: 25px;
+  height: 25px;
+}
+
+.prevBtn img {
+  transform: rotate(180deg); /* Rotate the left arrow */
+}
+
+/* Hidden cards */
+.hidden {
+  display: none;
+}
+
+.aboutBg0003invert {
+  position: absolute;
+  top: 99%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+/* Section About end*/
+
+.QTechMockup,
+.QTechMockup2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+  position: relative;
+}
+
+.qTech-content {
+  position: relative; /* just add this */
+}
+
+.openIcon {
+  width: 65%;
+  height: 54%;
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Default background and no blur */
+
+  border-radius: 16px;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  backdrop-filter: none;
+  cursor: pointer;
+}
+
+.openIcon.v2 {
+  width: 85%;
+  top: 35%;
+  height: 48%;
+}
+
+.openIcon:hover {
+  /* Blur background and darken a bit */
+
+  backdrop-filter: blur(5px);
+}
+
+.openIcon .icon {
+  font-size: 36px;
+  color: white;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  margin: auto;
+
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  z-index: 10; /* ensure icon is on top */
+  opacity: 0;
+
+  /* Add smooth transition for all */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+    backdrop-filter 0.3s ease;
+
+  /* Add blur effect to the background */
+  backdrop-filter: none; /* no blur by default */
+}
+
+.openIcon:hover .icon {
+  opacity: 1;
+
+  /* Blur effect */
+  backdrop-filter: blur(6px);
+
+  /* Shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+  /* Slight scale up animation */
+  transform: scale(1.05);
+}
+
+.openIcon2 {
+  width: 65%;
+  height: 141%;
+  position: absolute;
+  top: 139%;
+  z-index: 1111;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 16px; */
+  transition: background 0.3sease, backdrop-filter 0.3sease;
+  backdrop-filter: none;
+  cursor: pointer;
+}
+
+.openIcon2:hover {
+  /* Blur background and darken a bit */
+
+  backdrop-filter: blur(5px);
+}
+
+.openIcon2 .icon {
+  font-size: 36px;
+  color: white;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  margin: auto;
+
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  z-index: 10; /* ensure icon is on top */
+  opacity: 0;
+
+  /* Add smooth transition for all */
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+    backdrop-filter 0.3s ease;
+
+  /* Add blur effect to the background */
+  backdrop-filter: none; /* no blur by default */
+}
+
+.openIcon2:hover .icon {
+  opacity: 1;
+
+  /* Blur effect */
+  backdrop-filter: blur(6px);
+
+  /* Shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+
+  /* Slight scale up animation */
+  transform: scale(1.05);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#webProjects {
+  background-color: #fff;
+  height: fit-content;
+  position: relative;
+  overflow: hidden; /* Hides horizontal scrollbar */
+}
+
+#webProjects .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+
+#webProjects h2,
+#webProjects hr {
+  margin: 0; /* Removes all default margin */
+}
+
+#webProjects hr {
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 5px auto 0;
+}
+
+#webProjects h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 38px;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.qTech {
+  position: relative;
+}
+
+.QTechMockup {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  pointer-events: none;
+}
+
+.qTechHeading {
+  position: absolute;
+  bottom: 50px;
+  height: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white; /* change to match SVG contrast */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.qTechHeading #webProjName {
+  color: var(--primary-color);
+  font-size: 25px;
+  margin-left: 55px;
+  text-align: center;
+}
+
+.qTechHeading p {
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.QTechMockup2 {
+  position: absolute;
+  height: auto; /* Keeps original resolution */
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translateX(-50%); /* Centers the SVG */
+  z-index: 100;
+}
+
+.bg0003UX {
+  position: absolute;
+  bottom: -35px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bzu projects */
+
+#bzu {
+  margin-top: 150px;
+  height: 1500px;
+  background-color: #fff;
+  width: 85%;
+  margin: auto;
+}
+
+#bzu .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bzu h2,
+#bzu hr {
+  margin: 0; /* Removes all default margin */
+}
+
+#bzu hr {
+  width: 100px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  border: none;
+  margin: 5px auto 0;
+}
+
+#bzu h2 {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 38px;
+  color: var(--primary-color);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.bzuBG {
+  position: absolute;
+  bottom: -68px;
+  rotate: -10deg;
+}
+
+.bzu-project {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.1); /* Slight white with transparency */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 0.3s ease;
+  z-index: 1111;
+}
+
+.bzu-project:hover {
+  transform: translateY(-10px);
+}
+
+/* Image */
+.bzu-proj-img {
+  max-width: 100%;
+  max-height: 65%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+/* Bottom panel */
+.projDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: height 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Description initially hidden */
+.projDesc {
+  opacity: 0;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: opacity 0.4s ease;
+}
+
+/* Title always visible */
+.projTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* On hover: show full detail */
+.bzu-project:hover .projDetails {
+  height: 280px;
+}
+
+.bzu-project:hover .projDesc {
+  opacity: 1;
+}
+
+.bzu-content {
+  display: flex;
+  gap: 50px;
+  margin: auto;
+  justify-content: center;
+  margin-top: 250px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.bzu-proj-img {
+  width: 350px;
+}
+
+.dots-greenBZU {
+  position: absolute;
+  right: 100px;
+  margin-top: 140px;
+}
+
+.dots-greenBZU.r2 {
+  position: absolute;
+  right: 100px;
+  margin-top: 1150px;
+}
+
+.dots-greenBZU.left {
+  position: absolute;
+  left: 100px;
+  margin-top: 560px;
+  transform: scaleX(-1);
+  z-index: 1111111;
+}
+
+.triangleBZU.t1 {
+  position: absolute;
+  opacity: 10%;
+  margin-top: 710px;
+  right: 250px;
+}
+
+.triangleBZU {
+  position: absolute;
+  opacity: 10%;
+  margin-top: 1000px;
+}
+
+.eclips_shapeBZU {
+  position: absolute;
+  margin-top: 1550px;
+  left: 550px;
+}

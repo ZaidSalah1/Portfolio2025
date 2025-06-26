@@ -1,0 +1,214 @@
+/* General container styling */
+#about .container {
+  display: flex;
+  /* Arrange content in a row */
+  align-items: center;
+  /* Align items vertically */
+  justify-content: center;
+  /* Center the layout */
+  width: 75%;
+  margin: 50px auto;
+  gap: 50px;
+  /* Space between sections */
+}
+
+/* Styling for About Me section */
+.about-text {
+  flex: 1;
+  /* Allow About Me text to take space */
+  text-align: left;
+  /* Align text to the left */
+}
+
+.about-text h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #20b082;
+}
+
+/* Snake Game container */
+.snakeContainer {
+  width: 480px;
+  height: 620px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #21272f;
+  border-radius: 20px;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+/* Snake Game Elements */
+h1 {
+  font-size: 24px;
+  color: #20b082;
+  margin-bottom: 10px;
+}
+
+#score {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #00b095;
+}
+
+canvas {
+  background-color: #21272f;
+  border: 5px solid #898a89;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+  background-color: #20b082;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn i {
+  font-size: 20px; /* Icon size */
+}
+
+.btn:hover {
+  background-color: #18a574;
+  transform: scale(1.1);
+}
+
+#startButton {
+  font-weight: bold;
+  padding: 14px 28px;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#retryButton {
+  display: none;
+}
+
+/* Add this to your existing CSS */
+#gameCanvas {
+  position: relative;
+}
+
+.start-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #20b082;
+  font-size: 24px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.snakeContainer h1 {
+  font-size: 28px;
+  color: #20b082;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#score {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #00b095;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1c222a;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px rgba(0, 176, 149, 0.3);
+}
+
+.btn {
+  background-color: #20b082;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(32, 176, 130, 0.2);
+}
+
+.btn i {
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #18a574;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(32, 176, 130, 0.35);
+}
+
+/*  */
+.snakeContainer h1 {
+  font-size: 28px;
+  color: #20b082;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#score {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #00b095;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1c222a;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px rgba(0, 176, 149, 0.3);
+}
+
+.btn {
+  background-color: #20b082;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(32, 176, 130, 0.2);
+}
+
+.btn i {
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #18a574;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(32, 176, 130, 0.35);
+}
