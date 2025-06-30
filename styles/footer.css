@@ -15,8 +15,13 @@ footer {
   height: fit-content;
   z-index: 1;
   display: block;
-  /* Lower z-index so nav appears above it */
+   width: 100% !important;
+  height: auto !important;
+  display: block;
+  max-width: 100vw;
 }
+
+
 
 .footer-content {
   display: flex;
