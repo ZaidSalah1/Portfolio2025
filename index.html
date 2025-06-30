@@ -1903,20 +1903,23 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', () => {
   let hiddenAt = null;
 
   document.addEventListener('visibilitychange', () => {
-    if(document.hidden){
+    if (document.hidden) {
       hiddenAt = Date.now();
-    }else{
+    } else {
       const now = Date.now();
       const timeAway = now - hiddenAt;
 
-      if(timeAway > 30000) {
+      if (timeAway > 1000) {
         location.reload();
       }
     }
-  })
+  });
+});
+
 </script>
 
 </body>
