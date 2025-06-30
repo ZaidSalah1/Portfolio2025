@@ -406,6 +406,12 @@ label {
   .copyright hr {
     width: 95% !important;
   }
+
+  .socials a { 
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
 }
 
 @media (max-width: 360px) {

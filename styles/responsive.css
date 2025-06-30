@@ -369,14 +369,14 @@
     width: 85%;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+  .hello {
+    top: 90px !important;
+    left: 25px;
+  }
+
+
 }
-
-/* Skills section */
-
-/* Web Projects */
-
-/* UI/UX Section Start */
 
 .UIUX-item {
   z-index: 1;
@@ -503,7 +503,7 @@
     width: 38%;
   }
 
-    .bg0003invert2 {
+  .bg0003invert2 {
     top: unset;
     bottom: unset !important;
     top: 99.8%;
@@ -563,8 +563,6 @@
   .UIUX-item p {
     font-size: 18px;
   }
-
-
 }
 
 @media (max-width: 975px) {
@@ -803,7 +801,7 @@
     top: 32%;
   }
   .dots-white-reverse {
-    top: 79%;
+    top: 1570px;
   }
 
   .dots-white2 {
@@ -877,15 +875,18 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 410px) {
+  .nikeCard,
+  .nikeVideo {
+    width: 380px;
+  }
+}
+@media (max-width: 400px) {
   .nikeCard,
   .nikeVideo {
     width: 365px;
   }
 
-  .nikeVideo {
-    width: 365px;
-  }
   .hello p {
     width: 330px;
   }
