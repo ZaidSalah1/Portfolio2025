@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/component/sideHeader.css" />
   <link rel="stylesheet" href="styles/home.css" />
-  <link rel="stylesheet" href="styles/skills.css" />
   <link rel="stylesheet" href="styles/snake.css" />
   <link rel="stylesheet" href="styles/skills.css" />
   <link rel="stylesheet" href="styles/uiux.css" />
@@ -24,13 +23,11 @@
 
 
   <title>zaid</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
 
   <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.8.1/build/player/lottie.min.js"></script>
@@ -513,7 +510,6 @@
       font-size: 20px;
       font-weight: bold;
     }
-    
   </style>
 
   <div class="sideHeader">
@@ -1259,7 +1255,7 @@
 
     <div class="nikeCard">
       <div class="videoWrapper">
-        <video class="nikeVideo" autoplay muted loop>
+        <video class="nikeVideo" autoplay muted loop playsinline preload="auto">
           <source src="img/nike2.mp4" type="video/mp4" />
 
         </video>
@@ -1906,6 +1902,22 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  let hiddenAt = null;
+
+  document.addEventListener('visibilitychange', () => {
+    if(document.hidden){
+      hiddenAt = Date.now();
+    }else{
+      const now = Date.now();
+      const timeAway = now - hiddenAt;
+
+      if(timeAway > 30000) {
+        location.reload();
+      }
+    }
+  })
+</script>
 
 </body>
 
