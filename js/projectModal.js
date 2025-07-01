@@ -226,40 +226,40 @@ imageMobModal.addEventListener('click', e => {
 
 const imageModal = document.getElementById('imageModal');
 function openWebImgs(project, startIndex = 0) {
-  // document.getElementById("myModal").style.display = "none";
+  document.getElementById("myModal").style.display = "none";
 
-  // const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
+  const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
 
-  // swiperWrapper.innerHTML = "";
+  swiperWrapper.innerHTML = "";
 
-  // project.images.forEach((item, index) => {
-  //   swiperWrapper.innerHTML += `
-  //     <div class="swiper-slide">
-  //       <img src="${item}" alt="Image ${index + 1}" />
-  //     </div>
-  //   `;
-  // });
+  project.images.forEach((item, index) => {
+    swiperWrapper.innerHTML += `
+      <div class="swiper-slide">
+        <img src="${item}" alt="Image ${index + 1}" />
+      </div>
+    `;
+  });
 
-  // imageMobSwiper.update();
+  imageMobSwiper.update();
 
-  // imageModal.classList.add('show');
-  // document.body.classList.add('no-scroll');
-  // imageModal.style.display = "flex";
-  // imageMobSwiper.slideToLoop(startIndex, 0);
+  imageModal.classList.add('show');
+  document.body.classList.add('no-scroll');
+  imageModal.style.display = "flex";
+  imageMobSwiper.slideToLoop(startIndex, 0);
 
-  // imageSwiper = new Swiper(".imageSwiper", {
-  //   navigation: {
-  //     nextEl: ".swiper-button-next-image",
-  //     prevEl: ".swiper-button-prev-image",
-  //   },
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,  // Allows clicking on dots to switch slides
-  //   },
-  //   spaceBetween: 10,
-  //   slidesPerView: 1,
-  //   allowTouchMove: true,
-  // });
+  imageSwiper = new Swiper(".imageSwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next-image",
+      prevEl: ".swiper-button-prev-image",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,  // Allows clicking on dots to switch slides
+    },
+    spaceBetween: 10,
+    slidesPerView: 1,
+    allowTouchMove: true,
+  });
 
 }
 
