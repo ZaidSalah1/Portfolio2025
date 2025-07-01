@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// const imageMobModal = document.getElementById('imageMobModal');
+const imageMobModal = document.getElementById('imageMobModal');
 
-// const imageMobSwiper = new Swiper('.imageMobSwiper', {
+const imageMobSwiper = new Swiper('.imageMobSwiper', {
 
-//   navigation: {
-//     nextEl: '.swiper-button-next-mob',
-//     prevEl: '.swiper-button-prev-mob',
-//   },
-//   pagination: {
-//     el: '.swiper-pagination-mob',
-//     clickable: true,
-//   },
-// });
+  navigation: {
+    nextEl: '.swiper-button-next-mob',
+    prevEl: '.swiper-button-prev-mob',
+  },
+  pagination: {
+    el: '.swiper-pagination-mob',
+    clickable: true,
+  },
+});

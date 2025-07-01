@@ -42,7 +42,7 @@ function openModal(id) {
   document.querySelector(".features .heading p").textContent = project.headingText;
 
   document.querySelector('.github-btn').href = project.github;
-
+  
 
   populateFeatures(project.features, project.color);
 
@@ -158,22 +158,9 @@ function openMobImgs(project, startIndex = 0) {
     `;
   });
 
-  const imageMobSwiper = new Swiper('.imageMobSwiper', {
-    navigation: {
-      nextEl: '.swiper-button-next-mob',
-      prevEl: '.swiper-button-prev-mob',
-    },
-    pagination: {
-      el: '.swiper-pagination-mob',
-      clickable: true,
-    },
-    loop: project.images.length > 1,
-    spaceBetween: 0, // يمنع الفراغات بين الشرائح
-    slidesPerView: 1, // يعرض شريحة واحدة بشكل دائم
-  });
+  imageMobSwiper.update();
 
-
-  imageMobModal.setAttribute("data-mode", "mob");
+  imageMobModal.setAttribute("data-mode", "mob"); // ✅ FIXED
   imageMobModal.classList.add('show');
   document.body.classList.add('no-scroll');
 
