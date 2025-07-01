@@ -23,7 +23,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
-
   <title>zaid</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -514,7 +513,7 @@
     }
 
     .swiper-slide {
-      width: 100% !important;
+      width: 100%;
       flex-shrink: 0;
     }
 
@@ -522,11 +521,7 @@
       margin: auto;
     }
 
-    .imageMobSwiper {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
+
   </style>
 
   <div class="sideHeader">
@@ -799,43 +794,20 @@
 
     <div class="main-image-wrapper">
       <picture class="main">
-        <source srcset="img/assets/top375.svg" media="(max-width: 385px)">
-        <source srcset="img/assets/top425.svg" media="(max-width: 425px)">
-        <source srcset="img/assets/top425.svg" media="(max-width: 450px)">
-        <source srcset="img/assets/top600.svg" media="(max-width: 600px)">
-        <source srcset="img/assets/top768.svg" media="(max-width: 768px)">
-        <source srcset="img/assets/top1024.svg" media="(max-width: 1024px)">
-        <source srcset="img/assets/top1440.svg" media="(max-width: 1440px)">
-        <img src="img/assets/top.svg" alt="Top section design" style="width: 100%; height: auto;">
+        <source srcset="img/assets/top375.svg" width="100%" media="(max-width: 385px)">
+        <source srcset="img/assets/top425.svg" width="100%" media="(max-width: 425px)">
+        <source srcset="img/assets/top425.svg" width="100%" media="(max-width: 450px)">
+        <source srcset="img/assets/top600.svg" width="100%" media="(max-width: 600px)">
+        <source srcset="img/assets/top768.svg" width="100%" media="(max-width: 768px)">
+        <source srcset="img/assets/top1024.svg" width="100%" media="(max-width: 1024px)">
+        <source srcset="img/assets/top1440.svg" width="100%" media="(max-width: 1440px)">
+        <img src="img/assets/top.svg" width="100%" alt="Top section design">
       </picture>
     </div>
 
     <div class="menuOverlay" id="menuOverlay"></div>
 
   </header>
-
-  <script>
-    // نخفف عمليات إعادة الرسم أو إعادة التحميل على السكروول
-    let scrollTimeout;
-
-    window.addEventListener('scroll', () => {
-      if (scrollTimeout) return; // إذا في timeout شغال ما نعمل شيء
-
-      scrollTimeout = setTimeout(() => {
-        // مثلا ممكن نغير خصائص الصورة بطريقة ما تسبب إعادة تحميل
-        const img = document.querySelector('.main-image-wrapper picture img');
-        if (img) {
-          // Force repaint بدون إعادة تحميل (خدعة صغيرة)
-          img.style.willChange = 'transform';
-          setTimeout(() => {
-            img.style.willChange = 'auto';
-          }, 100);
-        }
-
-        scrollTimeout = null;
-      }, 100); // ضبط الفاصل الزمني حسب الحاجة
-    });
-  </script>
 
 
   <section id="about">
@@ -1941,9 +1913,7 @@
 <script src="js/menu.js"></script>
 
 <!-- Swiper JS -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   document.addEventListener('visibilitychange', () => {
     console.log('visibility changed:', document.hidden);
