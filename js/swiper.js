@@ -24,9 +24,8 @@ const imageMobModal = document.getElementById('imageMobModal');
 const openButton = document.getElementById('openModalButton'); // مثلاً
 
 const imageMobSwiper = new Swiper('.imageMobSwiper', {
-  spaceBetween: 20,
   slidesPerView: 1,
-
+ centeredSlides: true,
   navigation: {
     nextEl: '.swiper-button-next-mob',
     prevEl: '.swiper-button-prev-mob',
