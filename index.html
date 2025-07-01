@@ -20,6 +20,7 @@
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
   <title>zaid</title>
@@ -512,7 +513,7 @@
     }
 
     .swiper-slide {
-      width: 100%;
+      width: 100% !important;
       flex-shrink: 0;
     }
 
@@ -520,7 +521,12 @@
       margin: auto;
     }
 
-    
+.imageMobSwiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
   </style>
 
   <div class="sideHeader">

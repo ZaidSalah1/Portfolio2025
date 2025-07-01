@@ -42,7 +42,7 @@ function openModal(id) {
   document.querySelector(".features .heading p").textContent = project.headingText;
 
   document.querySelector('.github-btn').href = project.github;
-  
+
 
   populateFeatures(project.features, project.color);
 
@@ -158,7 +158,6 @@ function openMobImgs(project, startIndex = 0) {
     `;
   });
 
-  // ✅ إعادة إنشاء Swiper هنا بعد إضافة الصور:
   const imageMobSwiper = new Swiper('.imageMobSwiper', {
     navigation: {
       nextEl: '.swiper-button-next-mob',
@@ -168,8 +167,11 @@ function openMobImgs(project, startIndex = 0) {
       el: '.swiper-pagination-mob',
       clickable: true,
     },
-    loop: true,
+    loop: project.images.length > 1,
+    spaceBetween: 0, // يمنع الفراغات بين الشرائح
+    slidesPerView: 1, // يعرض شريحة واحدة بشكل دائم
   });
+
 
   imageMobModal.setAttribute("data-mode", "mob");
   imageMobModal.classList.add('show');
