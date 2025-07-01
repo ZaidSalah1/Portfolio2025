@@ -1,3 +1,12 @@
+.projectInfo a img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+#uiUxProjects {
+  height: fit-content !important;
+}
+
 /* UI/UX */
 
 #uiUxProjects {
@@ -96,9 +105,6 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-
-
 
 .UIUX-mobile {
   margin-top: 150px;
@@ -213,13 +219,11 @@
   transform: translateY(0);
 }
 
-
 #uiUxProjects {
-    position: relative;
-    background-color: #ecf0f3;
-    height: fit-content !important;
+  position: relative;
+  background-color: #ecf0f3;
+  height: fit-content !important;
 }
-
 
 .UIUX-mobile {
   position: relative;
@@ -363,9 +367,21 @@
   }
 }
 
+@media (max-width: 1440px) {
+  .UIUX-item.visible img,
+  .UIUX-item.visible .projectInfo {
+    width: 42%;
+  }
+}
+
 @media (max-width: 768px) {
   .nikeCard,
   .nikeVideo {
+  }
+
+  .UIUX-item.visible img,
+  .UIUX-item.visible .projectInfo {
+    width: 48%;
   }
 
   .dots-white2 {
@@ -388,6 +404,17 @@
   .nikeCard,
   .nikeVideo {
     /* width: 490px; */
+  }
+
+  .UIUX-item.row,
+  .UIUX-item {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .UIUX-item.visible img,
+  .UIUX-item.visible .projectInfo {
+    width: 95%;
   }
 }
 
@@ -416,6 +443,10 @@
   .hex.right2 {
     width: 75%;
     top: 200px;
+  }
+
+  .carRentHeading {
+    margin-top: 20px;
   }
 
   .dots-white-reverse {
@@ -480,6 +511,11 @@
   .nikeVideo {
   }
 
+  .UIUX-item.visible {
+    opacity: 1;
+    margin: 55px 0;
+  }
+
   .hex.right1 {
     width: 75%;
     top: 170px;
@@ -490,6 +526,15 @@
     top: 210px;
   }
 
+  .figma-inline {
+    width: 55px !important;
+    height: 55px !important;
+  }
+
+  .UIUX-item h1 {
+    font-size: 28px !important ;
+  }
+
   .hex.right2 {
     width: 75%;
     top: 209px;
@@ -497,5 +542,11 @@
 
   .dots-white-reverse {
     top: 2310px;
+  }
+}
+
+@media (max-width: 340px) {
+  .UIUX-item h1 {
+    font-size: 22px !important;
   }
 }

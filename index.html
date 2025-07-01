@@ -688,7 +688,7 @@
   </style>
 
 
-  <header id="home" >
+  <header id="home">
     <div class="topbar">
       <div class="logo">
         <span class="logoIcon"><i class="fa-solid fa-code"></i></span>
@@ -777,7 +777,7 @@
       <h1 class="hello-name">Zaid <span>Salah</span></h1>
       <p>UI/UX Designer & Full-Stack Developer |
         Building web, mobile, and desktop applications.</p>
-      <a href="#about"><button>About Me <i class="fa-solid fa-caret-down"></i></button></a>
+      <a href="#about"><button>Portfolio <i class="fa-solid fa-caret-down"></i></button></a>
     </div>
 
     <div class="main-image-wrapper">
@@ -1473,7 +1473,7 @@
 
 
 
-  <section id="webProjects" >
+  <section id="webProjects">
     <div class="heading">
       <h2>
         Web
@@ -1546,7 +1546,7 @@
 
 
 
-  <section id="projects" >
+  <section id="projects">
     <object class="hexagonal-shape" type="image/svg+xml" data="img/assets/hexagonal-shape.svg"></object>
     <object class="hexagonal-shape2" type="image/svg+xml" data="img/assets/hexagonal-shape.svg"></object>
 
@@ -1637,7 +1637,7 @@
   </script>
 
 
-  <section id="bzu" >
+  <section id="bzu">
     <object class="dots-greenBZU r1" type="image/svg+xml" data="img/assets/dots-green.svg"></object>
     <object class="dots-greenBZU r2" type="image/svg+xml" data="img/assets/dots-green.svg"></object>
 
@@ -1739,7 +1739,7 @@
   </section>
 
 
-  <footer id="footer" >
+  <footer id="footer">
     <div class="footer-heading">
       <i class="fa-solid fa-headset"></i>
       <h1>contact</h1>
@@ -1799,7 +1799,7 @@
     </div>
 
     <object id="footer-bg" class="footer-bg" type="image/svg+xml" data="img/assets/footer.svg"></object>
-    
+
     <div class="copyright">
       <hr>
       <p>&copy; 2025 Zaid Emad. All rights reserved.</p>
@@ -1903,20 +1903,20 @@
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
-document.addEventListener('visibilitychange', () => {
-  console.log('visibility changed:', document.hidden);
-  if(document.hidden){
-    hiddenAt = Date.now();
-  } else {
-    const now = Date.now();
-    const timeAway = now - hiddenAt;
-    // console.log('Time away (ms):', timeAway);
-    if(timeAway > 30000) {
-      // console.log('Reloading page...');
-      location.reload();
+  document.addEventListener('visibilitychange', () => {
+    console.log('visibility changed:', document.hidden);
+    if (document.hidden) {
+      hiddenAt = Date.now();
+    } else {
+      const now = Date.now();
+      const timeAway = now - hiddenAt;
+      // console.log('Time away (ms):', timeAway);
+      if (timeAway > 30000) {
+        // console.log('Reloading page...');
+        location.reload();
+      }
     }
-  }
-});
+  });
 
 </script>
 

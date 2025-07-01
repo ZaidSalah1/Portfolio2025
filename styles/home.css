@@ -647,6 +647,12 @@ body.no-scroll {
   }
 }
 
+@media (max-width: 400px) {
+  .hello {
+    left: 30px;
+  }
+}
+
 @media (max-width: 385px) {
   .hello .hello-name span,
   .hello .hello-name {
@@ -661,19 +667,31 @@ body.no-scroll {
     width: 39%;
     font-size: 16px;
   }
+
+  .hello {
+    top: 100px !important;
+  }
 }
 
 @media (max-width: 375px) {
   .hello {
-    top: 90px !important;
-    left: 35px;
+    top: 100px !important;
+    left: 20px;
+  }
+
+  .hello p {
+    width: 298px;
   }
 }
 
 @media (max-width: 355px) {
   .hello {
-    left: 20px;
-    top: 80px !important;
+    left: 25px;
+    top: 110px !important;
+  }
+
+  .main-image-wrapper {
+    margin-top: -15px;
   }
 
   .hello p {
@@ -690,9 +708,15 @@ body.no-scroll {
   }
 }
 
+@media (max-width: 340px) {
+  .hello {
+    left: 20px;
+  }
+}
+
 @media (max-width: 325px) {
   .hello {
-    top: 70px !important;
+    top: 100px !important;
     left: 10px;
   }
 

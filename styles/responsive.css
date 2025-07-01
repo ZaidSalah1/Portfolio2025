@@ -369,14 +369,7 @@
     width: 85%;
   }
 }
-@media (max-width: 375px) {
-  .hello {
-    top: 90px !important;
-    left: 25px;
-  }
 
-
-}
 
 .UIUX-item {
   z-index: 1;
@@ -697,9 +690,6 @@
 }
 
 @media (max-width: 450px) {
-  #uiUxProjects {
-    height: 3145px !important;
-  }
 
   .hexagonalShape.topLeft {
     top: -148px;
@@ -821,9 +811,6 @@
     transition: opacity 0.3s ease;
   }
 
-  .UIUX-item.visible {
-    opacity: 1;
-  }
 
   .UIUX-item img {
     opacity: 0;
@@ -887,9 +874,6 @@
     width: 365px;
   }
 
-  .hello p {
-    width: 330px;
-  }
 }
 
 @media (max-width: 365px) {
