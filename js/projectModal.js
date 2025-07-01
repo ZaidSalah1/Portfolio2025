@@ -158,9 +158,20 @@ function openMobImgs(project, startIndex = 0) {
     `;
   });
 
-  imageMobSwiper.update();
+  // ✅ إعادة إنشاء Swiper هنا بعد إضافة الصور:
+  const imageMobSwiper = new Swiper('.imageMobSwiper', {
+    navigation: {
+      nextEl: '.swiper-button-next-mob',
+      prevEl: '.swiper-button-prev-mob',
+    },
+    pagination: {
+      el: '.swiper-pagination-mob',
+      clickable: true,
+    },
+    loop: true,
+  });
 
-  imageMobModal.setAttribute("data-mode", "mob"); // ✅ FIXED
+  imageMobModal.setAttribute("data-mode", "mob");
   imageMobModal.classList.add('show');
   document.body.classList.add('no-scroll');
 
