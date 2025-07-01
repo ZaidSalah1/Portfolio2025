@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const featuresSwiper = new Swiper('.features-swiper', {
     
     slidesPerView: 'auto',
-    spaceBetween: 10,
+    spaceBetween: 30,
     loop: true,
     slidesPerGroup: 1,
     navigation: {
@@ -21,18 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const imageMobModal = document.getElementById('imageMobModal');
-const openButton = document.getElementById('openModalButton'); // مثلاً
 
-const imageMobSwiper = new Swiper('.custom-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  centeredSlides: true,
+const imageMobSwiper = new Swiper('.imageMobSwiper', {
+
   navigation: {
-    nextEl: '.custom-swiper-next',
-    prevEl: '.custom-swiper-prev',
+    nextEl: '.swiper-button-next-mob',
+    prevEl: '.swiper-button-prev-mob',
   },
   pagination: {
-    el: '.custom-swiper-pagination',
+    el: '.swiper-pagination-mob',
     clickable: true,
   },
 });

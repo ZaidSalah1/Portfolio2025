@@ -146,67 +146,58 @@ const closeImageMobModalBtn = document.getElementById('closeImageMobModal');
 function openMobImgs(project, startIndex = 0) {
   document.getElementById("myModal").style.display = "none";
   const imageMobModal = document.getElementById('imageMobModal');
-  const swiperWrapper = document.querySelector('.custom-swiper .swiper-wrapper');
+  const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
 
-  // نظف السلايدز
   swiperWrapper.innerHTML = "";
 
-  // أضف الصور
   project.images.forEach((item, index) => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-
-    const img = document.createElement('img');
-    img.src = item;
-    img.alt = `Image ${index + 1}`;
-
-    slide.appendChild(img);
-    swiperWrapper.appendChild(slide);
+    swiperWrapper.innerHTML += `
+      <div class="swiper-slide">
+        <img src="${item}" alt="Image ${index + 1}" />
+      </div>
+    `;
   });
 
-  // حدث السويبر بعد ما نضيف الصور
-  setTimeout(() => {
-    imageMobSwiper.update();
-    imageMobSwiper.slideToLoop(startIndex, 0);
-  }, 100);
+  imageMobSwiper.update();
 
-  imageMobModal.setAttribute("data-mode", "mob");
+  imageMobModal.setAttribute("data-mode", "mob"); // ✅ FIXED
   imageMobModal.classList.add('show');
   document.body.classList.add('no-scroll');
+
+  imageMobSwiper.slideToLoop(startIndex, 0);
 }
 
+function openDesignImgs(id) {
 
-function openDesignImgs(id, startIndex = 0) {
+
   const project = projectsData.find(p => p.id === id);
-  if (!project) return;
+
+  if (!project) {
+    return;
+  }
+
 
   const imageMobModal = document.getElementById('imageMobModal');
-  const swiperWrapper = document.querySelector('.custom-swiper .swiper-wrapper');
+  const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
 
   swiperWrapper.innerHTML = "";
 
   project.images.forEach((item, index) => {
-    const slide = document.createElement('div');
-    slide.className = 'swiper-slide';
-
-    const img = document.createElement('img');
-    img.src = item;
-    img.alt = `Image ${index + 1}`;
-
-    slide.appendChild(img);
-    swiperWrapper.appendChild(slide);
+    swiperWrapper.innerHTML += `
+      <div class="swiper-slide">
+        <img src="${item}" alt="Image ${index + 1}" />
+      </div>
+    `;
   });
 
-  setTimeout(() => {
-    imageMobSwiper.update();
-    imageMobSwiper.slideToLoop(startIndex, 0);
-  }, 100);
+  imageMobSwiper.update();
 
   imageMobModal.setAttribute("data-mode", "design");
   imageMobModal.classList.add('show');
   document.body.classList.add('no-scroll');
-}
 
+  imageMobSwiper.slideToLoop(startIndex, 0);
+}
 
 
 function closeImageModal() {
