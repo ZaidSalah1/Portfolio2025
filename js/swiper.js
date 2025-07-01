@@ -23,16 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
 const imageMobModal = document.getElementById('imageMobModal');
 const openButton = document.getElementById('openModalButton'); // مثلاً
 
-const imageMobSwiper = new Swiper('.imageMobSwiper', {
+const imageMobSwiper = new Swiper('.custom-swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
- centeredSlides: true,
+  centeredSlides: true,
   navigation: {
-    nextEl: '.swiper-button-next-mob',
-    prevEl: '.swiper-button-prev-mob',
+    nextEl: '.custom-swiper-next',
+    prevEl: '.custom-swiper-prev',
   },
   pagination: {
-    el: '.swiper-pagination-mob',
+    el: '.custom-swiper-pagination',
     clickable: true,
   },
 });
