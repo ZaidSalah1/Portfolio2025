@@ -205,3 +205,15 @@
     width: 100%;
   }
 }
+
+.close-imageModal {
+  top: 20px;
+  right: 20px;
+  /* keep other styles */
+}
+@media(max-width: 768px) {
+  .close-imageModal {
+    top: 10px;
+    right: 10px;
+  }
+}

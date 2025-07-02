@@ -47,7 +47,7 @@ function openModal(id) {
   document.querySelector(".features .heading p").textContent = project.headingText;
 
   document.querySelector('.github-btn').href = project.github;
-  
+
 
   populateFeatures(project.features, project.color);
 
@@ -143,51 +143,51 @@ function projectThem(colorCode) {
   // document.querySelector('.featuresItem i').style.color = colorCode;
 }
 
-function openMobImgs(project, startIndex = 0) {
+// function openMobImgs(project, startIndex = 0) {
 
-    document.getElementById("myModal").style.display = "none";
-    const imageMobModal = document.getElementById('imageMobModal');
-    const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
+//   document.getElementById("myModal").style.display = "none";
+//   // const imageMobModal = document.getElementById('imageMobModal');
+//   const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
 
-    swiperWrapper.innerHTML = "";
+//   swiperWrapper.innerHTML = "";
 
-    if (!project.images || !Array.isArray(project.images)) {
-        console.error('project.images is missing or not an array');
-        return;
-    }
+//   if (!project.images || !Array.isArray(project.images)) {
+//     console.error('project.images is missing or not an array');
+//     return;
+//   }
 
-    project.images.forEach((item, index) => {
-        swiperWrapper.innerHTML += `
-            <div class="swiper-slide">
-                <img src="${item}" alt="Image ${index + 1}" />
-            </div>
-        `;
-    });
+//   project.images.forEach((item, index) => {
+//     swiperWrapper.innerHTML += `
+//             <div class="swiper-slide">
+//                 <img src="${item}" alt="Image ${index + 1}" />
+//             </div>
+//         `;
+//   });
 
-    imageMobModal.setAttribute("data-mode", "mob");
-    imageMobModal.classList.add('show');
-    document.body.classList.add('no-scroll');
-    imageMobModal.style.display = "flex"; // Optional, if needed
+//   imageMobModal.setAttribute("data-mode", "mob");
+//   imageMobModal.classList.add('show');
+//   document.body.classList.add('no-scroll');
+//   imageMobModal.style.display = "flex"; // Optional, if needed
 
-    // Initialize Swiper properly
-    if (window.imageMobSwiper) {
-        window.imageMobSwiper.destroy(true, true);
-    }
-    window.imageMobSwiper = new Swiper(".imageMobSwiper", {
-        navigation: {
-            nextEl: ".swiper-button-next-mob",
-            prevEl: ".swiper-button-prev-mob",
-        },
-        pagination: {
-            el: ".swiper-pagination-mob",
-            clickable: true,
-        },
-        spaceBetween: 10,
-        slidesPerView: 1,
-        allowTouchMove: true,
-        initialSlide: startIndex,
-    });
-}
+//   // Initialize Swiper properly
+//   if (window.imageMobSwiper) {
+//     window.imageMobSwiper.destroy(true, true);
+//   }
+//   window.imageMobSwiper = new Swiper(".imageMobSwiper", {
+//     navigation: {
+//       nextEl: ".swiper-button-next-mob",
+//       prevEl: ".swiper-button-prev-mob",
+//     },
+//     pagination: {
+//       el: ".swiper-pagination-mob",
+//       clickable: true,
+//     },
+//     spaceBetween: 10,
+//     slidesPerView: 1,
+//     allowTouchMove: true,
+//     initialSlide: startIndex,
+//   });
+// }
 
 
 // function openDesignImgs(id) {
@@ -217,33 +217,25 @@ function openMobImgs(project, startIndex = 0) {
 // }
 
 
-function closeImageModal() {
-    const mode = imageMobModal.getAttribute("data-mode");
+// function closeImageModal() {
+//   const mode = imageMobModal.getAttribute("data-mode");
 
-    imageMobModal.classList.remove('show');
-    imageMobModal.style.display = "none"; // Optional: hide fully
-    document.body.classList.remove('no-scroll');
+//   imageMobModal.classList.remove('show');
+//   imageMobModal.style.display = "none"; // Optional: hide fully
+//   document.body.classList.remove('no-scroll');
 
-    if (mode === "mob") {
-        if (myModal) myModal.style.display = 'flex';
-    }
-    // No need to reopen anything in design mode
-}
+//   if (mode === "mob") {
+//     if (myModal) myModal.style.display = 'flex';
+//   }
+//   // No need to reopen anything in design mode
+// }
 
 // Close button event
+
+
 closeImageMobModalBtn.addEventListener('click', closeImageModal);
 
 // Close if clicking outside modal content
-imageMobModal.addEventListener('click', e => {
-    if (e.target === imageMobModal) {
-        closeImageModal();
-    }
-});
-
-// Close button event
-closeImageMobModalBtn.addEventListener('click', closeImageModal);
-
-// Also close if click outside content
 imageMobModal.addEventListener('click', e => {
   if (e.target === imageMobModal) {
     closeImageModal();
@@ -252,12 +244,20 @@ imageMobModal.addEventListener('click', e => {
 
 
 
-const imageModal = document.getElementById('imageModal');
+// 
+// 
+// 
+// 
 
+const imageModal = document.getElementById('imageModal');
+const closeBtnn = document.getElementById("close-imageModal");
+
+// Open modal with Swiper slides dynamically
 function openWebImgs(project, startIndex = 0) {
+
   document.getElementById("myModal").style.display = "none";
 
-  const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
+  const swiperWrapper = imageModal.querySelector('.imageSwiper .swiper-wrapper');
   swiperWrapper.innerHTML = "";
 
   if (!project.images || !Array.isArray(project.images)) {
@@ -273,11 +273,13 @@ function openWebImgs(project, startIndex = 0) {
     `;
   });
 
+  // Destroy previous instance if exists
   if (window.imageSwiper) {
     window.imageSwiper.destroy(true, true);
   }
 
-  window.imageSwiper = new Swiper(".imageSwiper", {
+  // Initialize Swiper
+  window.imageSwiper = new Swiper(imageModal.querySelector('.imageSwiper'), {
     navigation: {
       nextEl: ".swiper-button-next-image",
       prevEl: ".swiper-button-prev-image",
@@ -289,25 +291,45 @@ function openWebImgs(project, startIndex = 0) {
     spaceBetween: 10,
     slidesPerView: 1,
     allowTouchMove: true,
-    initialSlide: startIndex, // Use startIndex if you want to open at a specific slide
+    initialSlide: startIndex,
   });
 
+  // Show modal and disable page scroll
   imageModal.classList.add('show');
-  document.body.classList.add('no-scroll');
   imageModal.style.display = "flex";
+  document.body.classList.add('no-scroll');
 }
 
-
-
-const closeBtnn = document.querySelector(".close-imageModal");
-closeBtnn.addEventListener("click", () => {
-  // modal.style.display = "none";
-  document.getElementById("myModal").style.display = "block";
-
+// Close modal handler
+function closeImageModal() {
   imageModal.classList.remove('show');
-  document.body.classList.remove('no-scroll');
   imageModal.style.display = "none";
+  document.body.classList.remove('no-scroll');
+  // Optionally, show main modal again if needed
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close button event
+closeBtnn.addEventListener('click', closeImageModal);
+
+// Close modal if clicked outside content
+imageModal.addEventListener('click', e => {
+  if (e.target === imageModal) {
+    closeImageModal();
+  }
 });
+
+
+
+// const closeBtnn = document.querySelector(".close-imageModal");
+// closeBtnn.addEventListener("click", () => {
+//   // modal.style.display = "none";
+//   document.getElementById("myModal").style.display = "block";
+
+//   imageModal.classList.remove('show');
+//   document.body.classList.remove('no-scroll');
+//   imageModal.style.display = "none";
+// });
 
 
 // Close main modal \\
