@@ -627,20 +627,13 @@
   }
 
   .sideHeader {
-    width: 35px;
+    display: none;
   }
 
-  .sideHeader i {
-    font-size: 20px;
-    min-width: 7px;
-  }
+
 
   .dots-white-reverse2 {
     top: 371px;
-  }
-
-  .dots-white-reverse {
-    top: 1266px;
   }
 
   .dots-white2 {

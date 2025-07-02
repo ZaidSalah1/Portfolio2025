@@ -13,13 +13,13 @@ window.addEventListener("scroll", () => {
 
 
 // Scroll event:
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    showFloatMenu();
-  } else {
-    hideFloatMenu();
-  }
-});
+// window.addEventListener('scroll', () => {
+//   if (window.scrollY > 50) {
+//     showFloatMenu();
+//   } else {
+//     hideFloatMenu();
+//   }
+// });
 
 document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".sideHeader a");

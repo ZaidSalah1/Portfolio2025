@@ -486,7 +486,7 @@ nav ul li {
   bottom: -340px;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 50px 0px;
   justify-content: center;
   width: 75%;
 }

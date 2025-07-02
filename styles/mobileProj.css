@@ -504,8 +504,12 @@
   #projects .project_box .foodImg {
     width: 491px;
     top: -95px;
-    margin-right: -60px;
+    margin-right: -55px;
   }
+  
+      .dots-white-reverse {
+        top: 1035px;
+    }
 }
 
 @media (max-width: 768px) {
