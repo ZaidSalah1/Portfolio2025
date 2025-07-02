@@ -142,34 +142,53 @@ function projectThem(colorCode) {
 
 const closeImageMobModalBtn = document.getElementById('closeImageMobModal');
 
-
 function openMobImgs(project, startIndex = 0) {
-  document.getElementById("myModal").style.display = "none";
-  const imageMobModal = document.getElementById('imageMobModal');
-  const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
+    document.getElementById("myModal").style.display = "none";
+    const imageMobModal = document.getElementById('imageMobModal');
+    const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
 
-  swiperWrapper.innerHTML = "";
+    swiperWrapper.innerHTML = "";
 
-  project.images.forEach((item, index) => {
-    swiperWrapper.innerHTML += `
-      <div class="swiper-slide">
-        <img src="${item}" alt="Image ${index + 1}" />
-      </div>
-    `;
-  });
+    if (!project.images || !Array.isArray(project.images)) {
+        console.error('project.images is missing or not an array');
+        return;
+    }
 
-  imageMobSwiper.update();
+    project.images.forEach((item, index) => {
+        swiperWrapper.innerHTML += `
+            <div class="swiper-slide">
+                <img src="${item}" alt="Image ${index + 1}" />
+            </div>
+        `;
+    });
 
-  imageMobModal.setAttribute("data-mode", "mob"); // ✅ FIXED
-  imageMobModal.classList.add('show');
-  document.body.classList.add('no-scroll');
+    imageMobModal.setAttribute("data-mode", "mob");
+    imageMobModal.classList.add('show');
+    document.body.classList.add('no-scroll');
+    imageMobModal.style.display = "flex"; // Optional, if needed
 
-  imageMobSwiper.slideToLoop(startIndex, 0);
+    // Initialize Swiper properly
+    if (window.imageMobSwiper) {
+        window.imageMobSwiper.destroy(true, true);
+    }
+    window.imageMobSwiper = new Swiper(".imageMobSwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next-mob",
+            prevEl: ".swiper-button-prev-mob",
+        },
+        pagination: {
+            el: ".swiper-pagination-mob",
+            clickable: true,
+        },
+        spaceBetween: 10,
+        slidesPerView: 1,
+        allowTouchMove: true,
+        initialSlide: startIndex,
+    });
 }
 
+
 function openDesignImgs(id) {
-
-
   const project = projectsData.find(p => p.id === id);
 
   if (!project) {
@@ -190,13 +209,9 @@ function openDesignImgs(id) {
     `;
   });
 
-  imageMobSwiper.update();
-
   imageMobModal.setAttribute("data-mode", "design");
   imageMobModal.classList.add('show');
   document.body.classList.add('no-scroll');
-
-  imageMobSwiper.slideToLoop(startIndex, 0);
 }
 
 
@@ -225,12 +240,17 @@ imageMobModal.addEventListener('click', e => {
 
 
 const imageModal = document.getElementById('imageModal');
+
 function openWebImgs(project, startIndex = 0) {
   document.getElementById("myModal").style.display = "none";
 
   const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
-
   swiperWrapper.innerHTML = "";
+
+  if (!project.images || !Array.isArray(project.images)) {
+    console.error('project.images is missing or not an array');
+    return;
+  }
 
   project.images.forEach((item, index) => {
     swiperWrapper.innerHTML += `
@@ -240,28 +260,30 @@ function openWebImgs(project, startIndex = 0) {
     `;
   });
 
-  imageMobSwiper.update();
+  if (window.imageSwiper) {
+    window.imageSwiper.destroy(true, true);
+  }
 
-  imageModal.classList.add('show');
-  document.body.classList.add('no-scroll');
-  imageModal.style.display = "flex";
-  imageMobSwiper.slideToLoop(startIndex, 0);
-
-  imageSwiper = new Swiper(".imageSwiper", {
+  window.imageSwiper = new Swiper(".imageSwiper", {
     navigation: {
       nextEl: ".swiper-button-next-image",
       prevEl: ".swiper-button-prev-image",
     },
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,  // Allows clicking on dots to switch slides
+      clickable: true,
     },
     spaceBetween: 10,
     slidesPerView: 1,
     allowTouchMove: true,
+    initialSlide: startIndex, // Use startIndex if you want to open at a specific slide
   });
 
+  imageModal.classList.add('show');
+  document.body.classList.add('no-scroll');
+  imageModal.style.display = "flex";
 }
+
 
 
 const closeBtnn = document.querySelector(".close-imageModal");
