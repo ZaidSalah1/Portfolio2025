@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css?v=1.2" />
   <link rel="stylesheet" href="styles/component/sideHeader.css" />
   <link rel="stylesheet" href="styles/home.css" />
   <link rel="stylesheet" href="styles/snake.css" />
@@ -520,8 +520,6 @@
     .swiper-wrapper {
       margin: auto;
     }
-
-
   </style>
 
 
@@ -811,7 +809,7 @@
   </header>
 
 
-  <section id="about" >
+  <section id="about">
     <object class="aboutDotsBG .right" type="image/svg+xml" data="img/assets/dots-white2.svg"
       alt="Top section design"></object>
 
@@ -1914,7 +1912,9 @@
 <script src="js/menu.js"></script>
 
 <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
 <script>
   document.addEventListener('visibilitychange', () => {
     console.log('visibility changed:', document.hidden);

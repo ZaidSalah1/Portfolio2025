@@ -143,8 +143,8 @@ function projectThem(colorCode) {
   // document.querySelector('.featuresItem i').style.color = colorCode;
 }
 
-
 function openMobImgs(project, startIndex = 0) {
+
     document.getElementById("myModal").style.display = "none";
     const imageMobModal = document.getElementById('imageMobModal');
     const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
@@ -190,31 +190,31 @@ function openMobImgs(project, startIndex = 0) {
 }
 
 
-function openDesignImgs(id) {
-  const project = projectsData.find(p => p.id === id);
+// function openDesignImgs(id) {
+//   const project = projectsData.find(p => p.id === id);
 
-  if (!project) {
-    return;
-  }
+//   if (!project) {
+//     return;
+//   }
 
 
-  const imageMobModal = document.getElementById('imageMobModal');
-  const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
+//   const imageMobModal = document.getElementById('imageMobModal');
+//   const swiperWrapper = document.querySelector('.imageMobSwiper .swiper-wrapper');
 
-  swiperWrapper.innerHTML = "";
+//   swiperWrapper.innerHTML = "";
 
-  project.images.forEach((item, index) => {
-    swiperWrapper.innerHTML += `
-      <div class="swiper-slide">
-        <img src="${item}" alt="Image ${index + 1}" />
-      </div>
-    `;
-  });
+//   project.images.forEach((item, index) => {
+//     swiperWrapper.innerHTML += `
+//       <div class="swiper-slide">
+//         <img src="${item}" alt="Image ${index + 1}" />
+//       </div>
+//     `;
+//   });
 
-  imageMobModal.setAttribute("data-mode", "design");
-  imageMobModal.classList.add('show');
-  document.body.classList.add('no-scroll');
-}
+//   imageMobModal.setAttribute("data-mode", "design");
+//   imageMobModal.classList.add('show');
+//   document.body.classList.add('no-scroll');
+// }
 
 
 function closeImageModal() {
@@ -308,8 +308,6 @@ closeBtnn.addEventListener("click", () => {
   document.body.classList.remove('no-scroll');
   imageModal.style.display = "none";
 });
-
-
 
 
 // Close main modal \\
