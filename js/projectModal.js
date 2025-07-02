@@ -1,6 +1,11 @@
 const modal = document.getElementById("myModal");
 const closeBtn = document.querySelector(".close");
 
+// Global references
+const imageMobModal = document.getElementById('imageMobModal');
+const closeImageMobModalBtn = document.getElementById('closeImageMobModal');
+const myModal = document.getElementById('myModal');
+
 let projectsData = [];
 
 fetch('js/projects.json')
@@ -139,9 +144,6 @@ function projectThem(colorCode) {
 }
 
 
-
-const closeImageMobModalBtn = document.getElementById('closeImageMobModal');
-
 function openMobImgs(project, startIndex = 0) {
     document.getElementById("myModal").style.display = "none";
     const imageMobModal = document.getElementById('imageMobModal');
@@ -216,16 +218,27 @@ function openDesignImgs(id) {
 
 
 function closeImageModal() {
-  const mode = imageMobModal.getAttribute("data-mode");
+    const mode = imageMobModal.getAttribute("data-mode");
 
-  imageMobModal.classList.remove('show');
-  document.body.classList.remove('no-scroll');
+    imageMobModal.classList.remove('show');
+    imageMobModal.style.display = "none"; // Optional: hide fully
+    document.body.classList.remove('no-scroll');
 
-  if (mode === "mob") {
-    if (myModal) myModal.style.display = 'flex';
-  }
-  // no need to reopen anything in design mode
+    if (mode === "mob") {
+        if (myModal) myModal.style.display = 'flex';
+    }
+    // No need to reopen anything in design mode
 }
+
+// Close button event
+closeImageMobModalBtn.addEventListener('click', closeImageModal);
+
+// Close if clicking outside modal content
+imageMobModal.addEventListener('click', e => {
+    if (e.target === imageMobModal) {
+        closeImageModal();
+    }
+});
 
 // Close button event
 closeImageMobModalBtn.addEventListener('click', closeImageModal);
