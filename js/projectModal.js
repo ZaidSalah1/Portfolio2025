@@ -1,12 +1,10 @@
 const modal = document.getElementById("myModal");
 const closeBtn = document.querySelector(".close");
 
-// Global references
-const imageMobModal = document.getElementById('imageMobModal');
-const closeImageMobModalBtn = document.getElementById('closeImageMobModal');
-const myModal = document.getElementById('myModal');
-
 let projectsData = [];
+
+
+
 
 fetch('js/projects.json')
   .then(res => res.json())
@@ -100,22 +98,14 @@ function openModal(id) {
   projectImgs.parentNode.replaceChild(newProjectImgs, projectImgs);
 
   newProjectImgs.addEventListener("click", () => {
-    test();
     if (id !== "qtech" && id !== "qtech-dashboard") {
       openMobImgs(project);
     } else {
-      // openWebImgs(project);
-      // test();
-      test();
+      openImgs(project);
     }
   });
 
 
-}
-
-function test(){
-  alert("hhhhi");
-  console.log("sddddddddddddddddddd")
 }
 
 function populateFeatures(features, colorCode) {
@@ -150,7 +140,6 @@ function projectThem(colorCode) {
 }
 
 
-
 function closeModal() {
   modal.classList.remove("show");
   modal.classList.add("hide");
@@ -176,6 +165,45 @@ window.onclick = function (event) {
   }
 };
 
+
+// ============= Main Modal End ============= \\
+
+function openImgs(project) {
+  modal.style.display = "none";
+  document.getElementById('showImgs').style.display = "flex";
+
+  const swiper = document.querySelector('.swiper .swiper-wrapper');
+
+  swiper.innerHTML = "";
+
+  if (!project.images || !Array.isArray(project.images)) {
+    console.error('project.images is missing or not an array');
+    return;
+  }
+
+  project.images.forEach((item, index) => {
+    swiper.innerHTML += `
+              <div class="swiper-slide">
+                  <img src="${item}" alt="Image ${index + 1}" />
+              </div>
+          `;
+  });
+
+  const imageSwiper = new Swiper('#imageSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    spaceBetween: 20,
+    slidesPerView: 1,
+  });
+
+}
 
 
 
