@@ -99,7 +99,7 @@ function openModal(id) {
 
   newProjectImgs.addEventListener("click", () => {
     if (id !== "qtech" && id !== "qtech-dashboard") {
-      openMobImgs(project);
+      openMobileImgs(project);
     } else {
       openImgs(project);
     }
@@ -168,12 +168,14 @@ window.onclick = function (event) {
 
 // ============= Main Modal End ============= \\
 
+const closeShowBTn = document.querySelector('.closeShow');
+let imageSwiper = null;
+
 function openImgs(project) {
   modal.style.display = "none";
   document.getElementById('showImgs').style.display = "flex";
 
   const swiper = document.querySelector('.swiper .swiper-wrapper');
-
   swiper.innerHTML = "";
 
   if (!project.images || !Array.isArray(project.images)) {
@@ -183,13 +185,20 @@ function openImgs(project) {
 
   project.images.forEach((item, index) => {
     swiper.innerHTML += `
-              <div class="swiper-slide">
-                  <img src="${item}" alt="Image ${index + 1}" />
-              </div>
-          `;
+      <div class="swiper-slide">
+        <img src="${item}" alt="Image ${index + 1}" />
+      </div>
+    `;
   });
 
-  const imageSwiper = new Swiper('#imageSwiper', {
+  // 🧹 Destroy old instance if it exists
+  if (imageSwiper !== null) {
+    imageSwiper.destroy(true, true);
+    imageSwiper = null;
+  }
+
+  // ✅ Create new swiper and assign to the global reference
+  imageSwiper = new Swiper('#imageSwiper', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -202,10 +211,61 @@ function openImgs(project) {
     spaceBetween: 20,
     slidesPerView: 1,
   });
-
 }
 
+closeShowBTn.addEventListener('click', () => {
+  modal.style.display = "flex";
+  document.getElementById('showImgs').style.display = "none";
+});
 
+
+const closeMobileModal = document.querySelector('.closeMobileModal');
+let mobileSwiper = null;
+
+function openMobileImgs(project) {
+    modal.style.display = "none";
+
+  document.getElementById("mobileMockupModal").style.display = "flex";
+
+  const swiperWrapper = document.querySelector('#mobileImageSwiper .swiper-wrapper');
+  swiperWrapper.innerHTML = "";
+
+  if (!project.images || !Array.isArray(project.images)) {
+    console.error("project.images is missing or not an array");
+    return;
+  }
+
+  project.images.forEach((item, index) => {
+    swiperWrapper.innerHTML += `
+      <div class="swiper-slide">
+        <img src="${item}" alt="Mobile Mockup ${index + 1}" />
+      </div>
+    `;
+  });
+
+  if (mobileSwiper !== null) {
+    mobileSwiper.destroy(true, true);
+    mobileSwiper = null;
+  }
+
+  mobileSwiper = new Swiper('#mobileImageSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    spaceBetween: 15,
+    slidesPerView: 1,
+  });
+}
+
+closeMobileModal.addEventListener('click', () => {
+  document.getElementById("mobileMockupModal").style.display = "none";
+});
 
 
 

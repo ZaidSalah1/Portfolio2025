@@ -220,7 +220,7 @@
   position: absolute;
   right: 25px;
   top: 15px;
-  z-index: 111111111111111;
+  z-index: 9999;
 }
 
 .mobileBtn {
