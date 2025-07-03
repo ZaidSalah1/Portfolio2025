@@ -259,7 +259,7 @@ body.no-scroll {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  z-index: 111111111;
+  
 }
 
 .menu {
