@@ -78,15 +78,15 @@ function openModal(id) {
   //   prevBtn.classList.remove('green-hover');
   // }
 
-  // if (id != "qtech" && id != "qtech-dashboard") {
-  //   tools.style.display = "none";
-  //   tools2.style.display = "flex";
-  //   demoBtn.style.display = "none"
-  // } else {
-  //   tools2.style.display = "none";
-  //   tools.style.display = "flex";
-  //   demoBtn.style.display = "flex"
-  // }
+  if (id != "qtech" && id != "qtech-dashboard") {
+    tools.style.display = "none";
+    tools2.style.display = "flex";
+    demoBtn.style.display = "none"
+  } else {
+    tools2.style.display = "none";
+    tools.style.display = "flex";
+    demoBtn.style.display = "flex"
+  }
 
 
   projectThem(project.color);

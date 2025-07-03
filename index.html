@@ -173,7 +173,7 @@
     </div>
   </div>
 
-  <div class="showImgs" id="showImgs">
+  <div class="showImgs" id="showImgs" style="display: none;">
     <div class="swiper" id="imageSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -196,7 +196,7 @@
   <!-- Styles -->
   <style>
     .showImgs {
-      /* display: none; */
+      display: none;
       position: fixed;
       inset: 0;
       z-index: 99999911111111111111111111111;
@@ -236,8 +236,8 @@
   <script>
     let swiper;
 
-    document.getElementById('showImgs').style.display = "flex";
-    document.body.style.overflow = "hidden";
+    // document.getElementById('showImgs').style.display = "flex";
+    // document.body.style.overflow = "hidden";
 
     if (!swiper) {
       swiper = new Swiper("#imageSwiper", {
@@ -1651,7 +1651,7 @@
 
 </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 </body>
