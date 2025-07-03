@@ -223,8 +223,54 @@ const closeMobileModal = document.querySelector('.closeMobileModal');
 let mobileSwiper = null;
 
 function openMobileImgs(project) {
-    modal.style.display = "none";
+  modal.style.display = "none";
 
+  document.getElementById("mobileMockupModal").style.display = "flex";
+
+  const swiperWrapper = document.querySelector('#mobileImageSwiper .swiper-wrapper');
+  swiperWrapper.innerHTML = "";
+
+  if (!project.images || !Array.isArray(project.images)) {
+    console.error("project.images is missing or not an array");
+    return;
+  }
+
+  project.images.forEach((item, index) => {
+    swiperWrapper.innerHTML += `
+      <div class="swiper-slide">
+        <img src="${item}" alt="Mobile Mockup ${index + 1}" />
+      </div>
+    `;
+  });
+
+  if (mobileSwiper !== null) {
+    mobileSwiper.destroy(true, true);
+    mobileSwiper = null;
+  }
+
+  mobileSwiper = new Swiper('#mobileImageSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    spaceBetween: 15,
+    slidesPerView: 1,
+  });
+}
+
+function openUXUXImgs(id) {
+
+  const project = projectsData.find(p => p.id === id);
+  if(!project) {
+    return;
+  }
+
+  modal.style.display = "none";
   document.getElementById("mobileMockupModal").style.display = "flex";
 
   const swiperWrapper = document.querySelector('#mobileImageSwiper .swiper-wrapper');
