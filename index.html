@@ -4,18 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-
-  <!-- Swiper CSS (only one!) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- Your custom CSS files -->
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/component/sideHeader.css" />
   <link rel="stylesheet" href="styles/home.css" />
@@ -28,18 +16,36 @@
   <link rel="stylesheet" href="styles/footer.css" />
   <link rel="stylesheet" href="styles/responsive.css" />
   <link rel="stylesheet" href="styles/QTech/qTechModal.css" />
-  <link rel="stylesheet" href="styles/QTech/imageModal.css" />
+  <link rel="stylesheet" href="styles/QTech/imageModal.css">
 
-  <!-- Lottie Player -->
-  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.8.1/build/player/lottie.min.js"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
-  <!-- Swiper JS (only one!) -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-
-  <!-- Smooth Scroll -->
-  <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js" defer></script>
 
   <title>zaid</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.8.1/build/player/lottie.min.js"></script>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 
@@ -349,40 +355,118 @@
     </div>
   </div>
 
-  <style>
 
-  </style>
-
-  <div id="imageModal" class="imageModal">
+  <!-- <div id="imageModal" class="imageModal">
     <span class="close-imageModal" id="close-imageModal">&times;</span>
     <div class="imageModal-content">
       <div class="swiper imageSwiper">
         <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <img src="/img/qTech imgs/qTech-main.png" alt="Image 1" />
-          </div>
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <img src="/img/qTech imgs/qTech-productPage.png" alt="Image 2" />
-          </div>
 
-          <div class="swiper-slide">
-            <img src="/img/qTech imgs/qTech-allProductPage.png" alt="Image 2" />
-          </div>
-
-
-          <div class="swiper-slide">
-            <img src="/img/qTech imgs/qTech-checkoutPage.png" alt="Image 2" />
-          </div>
         </div>
-        <!-- Optional Swiper navigation -->
         <div class="swiper-button-next-image"></div>
         <div class="swiper-button-prev-image"></div>
         <div class="swiper-pagination"></div>
       </div>
     </div>
+  </div> -->
+
+
+<div class="showImgs" id="showImgs">
+  <div class="swiper" id="imageSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/projectsImgs/qTech imgs/d1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/projectsImgs/qTech imgs/d2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/projectsImgs/qTech imgs/d3.png" alt="">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
   </div>
+</div>
+
+
+
+  <!-- Styles -->
+  <style>
+  .showImgs {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999911111111111111111111111;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* top aligned for scroll */
+  overflow-y: auto; /* allow vertical scroll */
+}
+
+.swiper-slide img {
+  width: 100%; /* full width */
+  height: auto; /* maintain aspect ratio */
+  object-fit: unset; /* allow natural height */
+}
+
+  </style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+let swiper;
+
+function test() {
+  document.getElementById('showImgs').style.display = "flex";
+  document.body.style.overflow = "hidden";
+
+  if (!swiper) {
+    swiper = new Swiper("#imageSwiper", {
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      touchAngle: 45, // allows vertical scrolling inside slides
+    });
+  } else {
+    swiper.update();
+  }
+}
+
+function closeSwiperModal() {
+  document.getElementById('showImgs').style.display = "none";
+  document.body.style.overflow = "";
+}
+
+document.getElementById('showImgs').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeSwiperModal();
+  }
+});
+</script>
+
+
+
 
 
 

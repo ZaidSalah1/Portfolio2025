@@ -103,7 +103,8 @@ function openModal(id) {
     if (id !== "qtech" && id !== "qtech-dashboard") {
       openMobImgs(project);
     } else {
-      openWebImgs(project);
+      // openWebImgs(project);
+      test();
     }
   });
 
@@ -246,18 +247,14 @@ imageMobModal.addEventListener('click', e => {
 
 // 
 // 
-// 
-// 
+
 
 const imageModal = document.getElementById('imageModal');
-const closeBtnn = document.getElementById("close-imageModal");
 
-// Open modal with Swiper slides dynamically
 function openWebImgs(project, startIndex = 0) {
-
   document.getElementById("myModal").style.display = "none";
 
-  const swiperWrapper = imageModal.querySelector('.imageSwiper .swiper-wrapper');
+  const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
   swiperWrapper.innerHTML = "";
 
   if (!project.images || !Array.isArray(project.images)) {
@@ -273,13 +270,11 @@ function openWebImgs(project, startIndex = 0) {
     `;
   });
 
-  // Destroy previous instance if exists
   if (window.imageSwiper) {
     window.imageSwiper.destroy(true, true);
   }
 
-  // Initialize Swiper
-  window.imageSwiper = new Swiper(imageModal.querySelector('.imageSwiper'), {
+  window.imageSwiper = new Swiper(".imageSwiper", {
     navigation: {
       nextEl: ".swiper-button-next-image",
       prevEl: ".swiper-button-prev-image",
@@ -291,45 +286,29 @@ function openWebImgs(project, startIndex = 0) {
     spaceBetween: 10,
     slidesPerView: 1,
     allowTouchMove: true,
-    initialSlide: startIndex,
+    initialSlide: startIndex, // Use startIndex if you want to open at a specific slide
   });
 
-  // Show modal and disable page scroll
   imageModal.classList.add('show');
-  imageModal.style.display = "flex";
   document.body.classList.add('no-scroll');
+  imageModal.style.display = "flex";
 }
 
-// Close modal handler
-function closeImageModal() {
-  imageModal.classList.remove('show');
-  imageModal.style.display = "none";
-  document.body.classList.remove('no-scroll');
-  // Optionally, show main modal again if needed
+function openWebImgs2(project){
+  
+}
+
+
+
+const closeBtnn = document.querySelector(".close-imageModal");
+closeBtnn.addEventListener("click", () => {
+  // modal.style.display = "none";
   document.getElementById("myModal").style.display = "block";
-}
 
-// Close button event
-closeBtnn.addEventListener('click', closeImageModal);
-
-// Close modal if clicked outside content
-imageModal.addEventListener('click', e => {
-  if (e.target === imageModal) {
-    closeImageModal();
-  }
+  imageModal.classList.remove('show');
+  document.body.classList.remove('no-scroll');
+  imageModal.style.display = "none";
 });
-
-
-
-// const closeBtnn = document.querySelector(".close-imageModal");
-// closeBtnn.addEventListener("click", () => {
-//   // modal.style.display = "none";
-//   document.getElementById("myModal").style.display = "block";
-
-//   imageModal.classList.remove('show');
-//   document.body.classList.remove('no-scroll');
-//   imageModal.style.display = "none";
-// });
 
 
 // Close main modal \\
