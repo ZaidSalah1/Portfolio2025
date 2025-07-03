@@ -761,8 +761,12 @@ body.no-scroll {
     font-size: 16px;
   }
 
+  .main-image-wrapper {
+    margin-top: -40px;
+  }
+
   .hello {
-    top: 100px !important;
+    top: 90px !important;
   }
 }
 
@@ -842,7 +846,6 @@ body.no-scroll {
   .hello .hello-name {
     font-size: 55px;
   }
-  
 }
 
 @media (max-width: 315px) {
@@ -867,7 +870,6 @@ body.no-scroll {
     margin-top: 25px;
   }
 }
-
 
 /* Menu */
 

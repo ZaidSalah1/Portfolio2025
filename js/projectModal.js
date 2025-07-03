@@ -224,7 +224,6 @@ let mobileSwiper = null;
 
 function openMobileImgs(project) {
   modal.style.display = "none";
-
   document.getElementById("mobileMockupModal").style.display = "flex";
 
   const swiperWrapper = document.querySelector('#mobileImageSwiper .swiper-wrapper');
