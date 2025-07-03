@@ -506,10 +506,10 @@
     top: -95px;
     margin-right: -55px;
   }
-  
-      .dots-white-reverse {
-        top: 1035px;
-    }
+
+  .dots-white-reverse {
+    top: 1035px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -661,6 +661,15 @@
   }
 }
 
+@media (max-width: 600px) {
+  #projects .project_box .foodImg {
+    width: 435px;
+    top: -100px;
+    left: unset;
+    right: 4%;
+  }
+}
+
 @media (max-width: 550px) {
   #projects {
     height: 1875px;
@@ -750,6 +759,15 @@
   .bg0003invert {
     bottom: -65px;
     top: unset;
+  }
+}
+
+@media (max-width: 550px) {
+  #projects .project_box .foodImg {
+    width: 425px;
+    top: -140px;
+    left: unset;
+    right: 8%;
   }
 }
 

@@ -18,6 +18,7 @@
   .hello .hello-name span,
   .hello .hello-name {
     font-size: 146px;
+    width: fit-content;
   }
 }
 
@@ -426,6 +427,10 @@ body.no-scroll {
 }
 
 @media (max-width: 768px) {
+  .topbar {
+    position: unset;
+  }
+
   .logo span {
     font-size: 28px;
   }
@@ -444,7 +449,7 @@ body.no-scroll {
 
   .hello .hello-name span,
   .hello .hello-name {
-    font-size: 85px;
+    font-size: 115px;
   }
 
   .main {
@@ -478,6 +483,11 @@ body.no-scroll {
     left: 65px;
   }
 
+  .hello p {
+    width: 590px;
+    font-size: 22px;
+  }
+
   .hello span {
     font-size: 25px;
   }
@@ -505,13 +515,36 @@ body.no-scroll {
 @media (max-width: 730px) {
   .hello .hello-name span,
   .hello .hello-name {
-    font-size: 70px;
+    font-size: 100px;
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 715px) {
+  .main-image-wrapper {
+    margin-top: 25px;
+  }
+
   .hello p {
-    width: 320px;
+    width: 530px;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-image-wrapper {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hello {
+    left: unset;
+    right: 5%;
+  }
+}
+
+@media (max-width: 625px) {
+  .main-image-wrapper {
+    margin-top: 65px;
   }
 }
 
@@ -522,6 +555,36 @@ body.no-scroll {
 
   .mobile {
     right: 115px;
+  }
+}
+
+@media (max-width: 650px) {
+  .hello {
+    left: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-image-wrapper {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 590px) {
+  .hello .hello-name span,
+  .hello .hello-name {
+    font-size: 80px;
+  }
+}
+@media (max-width: 570px) {
+  .hello {
+    top: 120px;
+    left: 45px;
+  }
+
+  .hello p {
+    font-size: 20px;
+    width: 470px;
   }
 }
 
@@ -539,21 +602,35 @@ body.no-scroll {
   }
 
   .hello {
-    top: 70px;
-    left: 65px;
+    top: 110px;
+    left: 35px;
   }
 
   .hello .hello-name span,
   .hello .hello-name {
-    font-size: 55px;
+    font-size: 85px;
   }
 
   .hello p {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .hello .hello-name {
     margin: -18px 0 0;
+  }
+}
+
+@media (max-width: 530px) {
+  .hello p {
+    font-size: 20px;
+    width: 420px;
+  }
+}
+
+@media (max-width: 510px) {
+  .hello .hello-name span,
+  .hello .hello-name {
+    font-size: 75px;
   }
 }
 
@@ -563,7 +640,7 @@ body.no-scroll {
   }
 
   .main-image-wrapper {
-    margin-top: -45px;
+    margin-top: -5px;
   }
 
   .hello {
@@ -580,10 +657,15 @@ body.no-scroll {
   .topbar {
     width: 93%;
   }
+}
 
-  .hello .hello-name span,
-  .hello .hello-name {
-    font-size: 55px;
+@media (max-width: 490px) {
+  .topbar {
+    position: unset;
+  }
+
+  .main-image-wrapper {
+    margin-top: 15px;
   }
 }
 
@@ -592,10 +674,24 @@ body.no-scroll {
     left: 26px;
   }
 }
+
 @media (max-width: 450px) {
   .hello {
-    top: 135px;
-    left: 50px;
+    top: 115px;
+    left: 30px;
+  }
+  .hello .hello-name span,
+  .hello .hello-name {
+    font-size: 65px;
+  }
+
+  .hello p {
+    font-size: 20px;
+    width: 390px;
+  }
+
+  .main-image-wrapper {
+    margin-top: -15px;
   }
 }
 
@@ -616,7 +712,7 @@ body.no-scroll {
   }
 
   .hello {
-    top: 110px;
+    top: 120px;
     left: 35px;
   }
 
@@ -650,14 +746,11 @@ body.no-scroll {
 @media (max-width: 400px) {
   .hello {
     left: 30px;
+    top: 110px;
   }
 }
 
 @media (max-width: 385px) {
-  .hello .hello-name span,
-  .hello .hello-name {
-    font-size: 50px;
-  }
   .hello p {
     font-size: 16px;
     width: 348px;
@@ -681,6 +774,17 @@ body.no-scroll {
 
   .hello p {
     width: 298px;
+  }
+}
+
+@media (max-width: 365px) {
+  .hello p {
+    width: 300px !important;
+  }
+
+  .hello .hello-name span,
+  .hello .hello-name {
+    font-size: 55px;
   }
 }
 
@@ -725,11 +829,45 @@ body.no-scroll {
   }
 }
 
-@media (max-width: 310px) {
+@media (max-width: 320px) {
   .hello {
     left: 8px;
   }
+
+  .main-image-wrapper {
+    margin-top: -5px;
+  }
+
+  .hello .hello-name span,
+  .hello .hello-name {
+    font-size: 55px;
+  }
+  
 }
+
+@media (max-width: 315px) {
+  .hello {
+    left: 20px;
+  }
+
+  .main-image-wrapper {
+    margin-top: -5px;
+  }
+
+  .hello .hello-name span,
+  .hello .hello-name {
+    font-size: 52px;
+  }
+
+  .hello p {
+    width: 290px !important;
+  }
+
+  .main-image-wrapper {
+    margin-top: 25px;
+  }
+}
+
 
 /* Menu */
 
