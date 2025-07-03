@@ -105,7 +105,7 @@ function openModal(id) {
     } else {
       // openWebImgs(project);
       // test();
-      test11();
+      loadSwiperHtml(project);
     }
   });
 
@@ -295,9 +295,80 @@ function openWebImgs(project, startIndex = 0) {
   imageModal.style.display = "flex";
 }
 
-function openWebImgs2(project){
-  
+async function loadSwiperHtml(project) {
+  try {
+    const response = await fetch("swiperModal.html");
+    if (!response.ok) throw new Error('Network error');
+    const html = await response.text();
+
+    document.getElementById('showImgs').style.display = 'flex';
+
+    
+    // Now select the swiper-wrapper inside the loaded HTML
+    const swiperWrapper = document.querySelector('#imageSwiper .swiper-wrapper');
+
+    console.log("??DS?S?S: ", swiperWrapper);
+
+    // Clear any existing slides (if any)
+    swiperWrapper.innerHTML = '';
+
+    // Dynamically insert slides from project.images
+    project.images.forEach((item, index) => {
+      swiperWrapper.innerHTML += `
+        <div class="swiper-slide">
+          <img src="${item}" alt="Image ${index + 1}" />
+        </div>
+      `;
+    });
+
+    // Add navigation and pagination elements if not already inside your swiperModal.html
+    // (If they are already there, you can skip this step)
+    if (!document.querySelector('#imageSwiper .swiper-button-next')) {
+      document.getElementById('imageSwiper').insertAdjacentHTML('beforeend', `
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      `);
+    }
+
+    // Initialize or update swiper
+    if (!window.swiper) {
+      window.swiper = new Swiper('#imageSwiper', {
+        spaceBetween: 0,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        touchAngle: 45,
+      });
+    } else {
+      window.swiper.update();
+    }
+
+  } catch (err) {
+    console.error('Failed to load swiper HTML:', err);
+  }
 }
+
+// function openModal() {
+//   document.getElementById('showImgs').style.display = 'flex';
+//   document.body.style.overflow = 'hidden';
+//   loadSwiperHTML();
+// }
+
+function closeModal() {
+  document.getElementById('showImgs').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close modal by clicking outside swiper
+document.getElementById('showImgs').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeModal();
+});
 
 
 
