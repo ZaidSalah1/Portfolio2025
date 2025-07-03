@@ -49,7 +49,7 @@ function openModal(id) {
   document.querySelector('.github-btn').href = project.github;
 
 
-  populateFeatures(project.features, project.color);
+  // populateFeatures(project.features, project.color);
 
   document.querySelector("#tools .left p").innerHTML = `
   ${project.build}
@@ -63,30 +63,30 @@ function openModal(id) {
   const tools2 = document.querySelector('#tools .container .right.v2');
   const demoBtn = document.querySelector('.demo-btn-wrapper');
 
-  const nextBtn = document.querySelector('.features-swiper-button-next-feature');
-  const prevBtn = document.querySelector('.features-swiper-button-prev-feature');
+  // const nextBtn = document.querySelector('.features-swiper-button-next-feature');
+  // const prevBtn = document.querySelector('.features-swiper-button-prev-feature');
 
-  if (id === "athkar") {
-    nextBtn.classList.add('green-hover');
-    prevBtn.classList.add('green-hover');
-  } else if (id === "carRent") {
-    nextBtn.classList.add('blue-hover');
-    prevBtn.classList.add('blue-hover');
-  }
-  else {
-    nextBtn.classList.remove('green-hover');
-    prevBtn.classList.remove('green-hover');
-  }
+  // if (id === "athkar") {
+  //   nextBtn.classList.add('green-hover');
+  //   prevBtn.classList.add('green-hover');
+  // } else if (id === "carRent") {
+  //   nextBtn.classList.add('blue-hover');
+  //   prevBtn.classList.add('blue-hover');
+  // }
+  // else {
+  //   nextBtn.classList.remove('green-hover');
+  //   prevBtn.classList.remove('green-hover');
+  // }
 
-  if (id != "qtech" && id != "qtech-dashboard") {
-    tools.style.display = "none";
-    tools2.style.display = "flex";
-    demoBtn.style.display = "none"
-  } else {
-    tools2.style.display = "none";
-    tools.style.display = "flex";
-    demoBtn.style.display = "flex"
-  }
+  // if (id != "qtech" && id != "qtech-dashboard") {
+  //   tools.style.display = "none";
+  //   tools2.style.display = "flex";
+  //   demoBtn.style.display = "none"
+  // } else {
+  //   tools2.style.display = "none";
+  //   tools.style.display = "flex";
+  //   demoBtn.style.display = "flex"
+  // }
 
 
   projectThem(project.color);
@@ -100,19 +100,23 @@ function openModal(id) {
   projectImgs.parentNode.replaceChild(newProjectImgs, projectImgs);
 
   newProjectImgs.addEventListener("click", () => {
+    test();
     if (id !== "qtech" && id !== "qtech-dashboard") {
       openMobImgs(project);
     } else {
       // openWebImgs(project);
       // test();
-      loadSwiperHtml(project);
+      test();
     }
   });
 
 
 }
 
-
+function test(){
+  alert("hhhhi");
+  console.log("sddddddddddddddddddd")
+}
 
 function populateFeatures(features, colorCode) {
   const container = document.querySelector(".featuresItem");
@@ -144,6 +148,38 @@ function projectThem(colorCode) {
   document.querySelector("#myModal .projectTitle").style.background = colorCode;
   // document.querySelector('.featuresItem i').style.color = colorCode;
 }
+
+
+
+function closeModal() {
+  modal.classList.remove("show");
+  modal.classList.add("hide");
+  document.body.classList.remove("no-scroll");
+
+  // Wait for animation to finish, then hide modal
+  modal.addEventListener(
+    "animationend",
+    () => {
+      if (modal.classList.contains("hide")) {
+        modal.style.display = "none";
+      }
+    },
+    { once: true } // ensures event fires only once each close
+  );
+}
+
+closeBtn.onclick = closeModal;
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    closeModal();
+  }
+};
+
+
+
+
+
 
 // function openMobImgs(project, startIndex = 0) {
 
@@ -235,176 +271,53 @@ function projectThem(colorCode) {
 // Close button event
 
 
-closeImageMobModalBtn.addEventListener('click', closeImageModal);
 
-// Close if clicking outside modal content
-imageMobModal.addEventListener('click', e => {
-  if (e.target === imageMobModal) {
-    closeImageModal();
-  }
-});
+// const imageModal = document.getElementById('imageModal');
 
+// function openWebImgs(project, startIndex = 0) {
+//   document.getElementById("myModal").style.display = "none";
 
+//   const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
+//   swiperWrapper.innerHTML = "";
 
-// 
-// 
+//   if (!project.images || !Array.isArray(project.images)) {
+//     console.error('project.images is missing or not an array');
+//     return;
+//   }
 
+//   project.images.forEach((item, index) => {
+//     swiperWrapper.innerHTML += `
+//       <div class="swiper-slide">
+//         <img src="${item}" alt="Image ${index + 1}" />
+//       </div>
+//     `;
+//   });
 
-const imageModal = document.getElementById('imageModal');
+//   if (window.imageSwiper) {
+//     window.imageSwiper.destroy(true, true);
+//   }
 
-function openWebImgs(project, startIndex = 0) {
-  document.getElementById("myModal").style.display = "none";
+//   window.imageSwiper = new Swiper(".imageSwiper", {
+//     navigation: {
+//       nextEl: ".swiper-button-next-image",
+//       prevEl: ".swiper-button-prev-image",
+//     },
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     spaceBetween: 10,
+//     slidesPerView: 1,
+//     allowTouchMove: true,
+//     initialSlide: startIndex, // Use startIndex if you want to open at a specific slide
+//   });
 
-  const swiperWrapper = document.querySelector('.imageSwiper .swiper-wrapper');
-  swiperWrapper.innerHTML = "";
-
-  if (!project.images || !Array.isArray(project.images)) {
-    console.error('project.images is missing or not an array');
-    return;
-  }
-
-  project.images.forEach((item, index) => {
-    swiperWrapper.innerHTML += `
-      <div class="swiper-slide">
-        <img src="${item}" alt="Image ${index + 1}" />
-      </div>
-    `;
-  });
-
-  if (window.imageSwiper) {
-    window.imageSwiper.destroy(true, true);
-  }
-
-  window.imageSwiper = new Swiper(".imageSwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next-image",
-      prevEl: ".swiper-button-prev-image",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    spaceBetween: 10,
-    slidesPerView: 1,
-    allowTouchMove: true,
-    initialSlide: startIndex, // Use startIndex if you want to open at a specific slide
-  });
-
-  imageModal.classList.add('show');
-  document.body.classList.add('no-scroll');
-  imageModal.style.display = "flex";
-}
-
-async function loadSwiperHtml(project) {
-  try {
-    const response = await fetch("swiperModal.html");
-    if (!response.ok) throw new Error('Network error');
-    const html = await response.text();
-
-    document.getElementById('showImgs').style.display = 'flex';
-
-    
-    // Now select the swiper-wrapper inside the loaded HTML
-    const swiperWrapper = document.querySelector('#imageSwiper .swiper-wrapper');
-
-    console.log("??DS?S?S: ", swiperWrapper);
-
-    // Clear any existing slides (if any)
-    swiperWrapper.innerHTML = '';
-
-    // Dynamically insert slides from project.images
-    project.images.forEach((item, index) => {
-      swiperWrapper.innerHTML += `
-        <div class="swiper-slide">
-          <img src="${item}" alt="Image ${index + 1}" />
-        </div>
-      `;
-    });
-
-    // Add navigation and pagination elements if not already inside your swiperModal.html
-    // (If they are already there, you can skip this step)
-    if (!document.querySelector('#imageSwiper .swiper-button-next')) {
-      document.getElementById('imageSwiper').insertAdjacentHTML('beforeend', `
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      `);
-    }
-
-    // Initialize or update swiper
-    if (!window.swiper) {
-      window.swiper = new Swiper('#imageSwiper', {
-        spaceBetween: 0,
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        touchAngle: 45,
-      });
-    } else {
-      window.swiper.update();
-    }
-
-  } catch (err) {
-    console.error('Failed to load swiper HTML:', err);
-  }
-}
-
-// function openModal() {
-//   document.getElementById('showImgs').style.display = 'flex';
-//   document.body.style.overflow = 'hidden';
-//   loadSwiperHTML();
+//   imageModal.classList.add('show');
+//   document.body.classList.add('no-scroll');
+//   imageModal.style.display = "flex";
 // }
 
-function closeModal() {
-  document.getElementById('showImgs').style.display = 'none';
-  document.body.style.overflow = '';
-}
-
-// Close modal by clicking outside swiper
-document.getElementById('showImgs').addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeModal();
-});
-
-
-
-const closeBtnn = document.querySelector(".close-imageModal");
-closeBtnn.addEventListener("click", () => {
-  // modal.style.display = "none";
-  document.getElementById("myModal").style.display = "block";
-
-  imageModal.classList.remove('show');
-  document.body.classList.remove('no-scroll');
-  imageModal.style.display = "none";
-});
 
 
 // Close main modal \\
-function closeModal() {
-  modal.classList.remove("show");
-  modal.classList.add("hide");
-  document.body.classList.remove("no-scroll");
 
-  // Wait for animation to finish, then hide modal
-  modal.addEventListener(
-    "animationend",
-    () => {
-      if (modal.classList.contains("hide")) {
-        modal.style.display = "none";
-      }
-    },
-    { once: true } // ensures event fires only once each close
-  );
-}
-
-closeBtn.onclick = closeModal;
-
-window.onclick = function (event) {
-  if (event.target === modal) {
-    closeModal();
-  }
-};

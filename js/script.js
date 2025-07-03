@@ -258,21 +258,3 @@ document.addEventListener("DOMContentLoaded", updateMockupImage);
 // Update on resize
 window.addEventListener('resize', updateMockupImage);
 
-
-// --- Swiper Initialization (Commented Out) ---
-// If you uncomment this, make sure Swiper library is properly included.
-// const featuresSwiper = new Swiper('.features-swiper', {
-//   slidesPerView: 3,
-//   spaceBetween: 30,
-//   loop: true,
-//   slidesPerGroup: 1,
-//   navigation: {
-//     nextEl: '.features-swiper-button-next-feature',
-//     prevEl: '.features-swiper-button-prev-feature',
-//   },
-//   breakpoints: {
-//     0: { slidesPerView: 1 },
-//     768: { slidesPerView: 2 },
-//     1024: { slidesPerView: 3 }
-//   }
-// });
