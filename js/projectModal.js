@@ -104,7 +104,8 @@ function openModal(id) {
       openMobImgs(project);
     } else {
       // openWebImgs(project);
-      test();
+      // test();
+      test11();
     }
   });
 
